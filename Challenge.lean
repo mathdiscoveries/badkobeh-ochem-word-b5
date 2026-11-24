@@ -119,7 +119,7 @@ def roteFib : ℕ → Bool
 
 /-- `p` is a period of the finite word `w`. -/
 def IsPeriod {α : Type*} (w : List α) (p : ℕ) : Prop :=
-  ∀ i : ℕ, ∀ hi : i + p < w.length, w[i]'(by omega) = w[i + p]'hi
+  ∀ i : ℕ, ∀ hi : i + p < w.length, w[i]'(Nat.lt_of_le_of_lt (Nat.le_add_right i p) hi) = w[i + p]'hi
 
 /-- Set of fractional repetition exponents `|w| / p` over factors `w` of `W` and periods `p ≥ 1`. -/
 def ExponentSet {α : Type*} (W : ℕ → α) : Set ℝ :=

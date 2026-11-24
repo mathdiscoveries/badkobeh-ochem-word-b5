@@ -93,7 +93,7 @@ def roteFib : ℕ → Bool
   | k + 1 => xor (roteFib k) (!(fibWord (k + 1)))
 
 def IsPeriod {α : Type*} (w : List α) (p : ℕ) : Prop :=
-  ∀ i : ℕ, ∀ hi : i + p < w.length, w[i]'(by omega) = w[i + p]'hi
+  ∀ i : ℕ, ∀ hi : i + p < w.length, w[i]'(Nat.lt_of_le_of_lt (Nat.le_add_right i p) hi) = w[i + p]'hi
 
 def ExponentSet {α : Type*} (W : ℕ → α) : Set ℝ :=
   { e : ℝ | ∃ w p, IsFactorInf w W ∧ 1 ≤ p ∧ IsPeriod w p ∧ e = (w.length : ℝ) / (p : ℝ) }
