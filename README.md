@@ -1,5 +1,7 @@
 # Badkobeh and Ochem's Word `b5`: Lean 4 + Mathlib Formalization
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24490746.svg)](https://doi.org/10.5281/zenodo.24490746)
+
 Unconditional Lean 4 (`v4.35.0`) + Mathlib (`v4.35.0`) formalization (514 audited declarations, zero `sorry`, zero `native_decide`, standard axioms `propext`, `Quot.sound`, `Classical.choice` only) resolving all four questions and observations (Q1, Q2, O1, O2) from Badkobeh and Ochem (*Theoret. Comput. Sci.* 588, 2015) for the 5-letter fixed point `b5 = f5^ω(0)` (`0 ↦ 01, 1 ↦ 23, 2 ↦ 4, 3 ↦ 21, 4 ↦ 0`).
 
 Companion manuscript, interactive Proof Blueprint, and verification archive:
