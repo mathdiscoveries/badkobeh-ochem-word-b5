@@ -1,0 +1,19 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "BadkobehOchemB5Challenge.b5_codes_interval_translation",
+    "BadkobehOchemB5Challenge.b5_factor_complexity",
+    "BadkobehOchemB5Challenge.b5_sturmian_projection",
+    "BadkobehOchemB5Challenge.b5_rote_fibonacci_projection",
+    "BadkobehOchemB5Challenge.b5_critical_exponent",
+    "BadkobehOchemB5Challenge.b5_sharp_second_order_and_deficit",
+    "BadkobehOchemB5Challenge.b5_asymp_critExp_and_irrational",
+    "BadkobehOchemB5Challenge.b5_language_rev_swap34_invariant",
+    "BadkobehOchemB5Challenge.pi3B5_factor_complexity",
+    "BadkobehOchemB5Challenge.b5_not_C_balanced",
+    "BadkobehOchemB5Challenge.fB5_iter_length_rec"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}

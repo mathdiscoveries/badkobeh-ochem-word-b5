@@ -1,0 +1,181 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Badkobeh and Ochem's Word b5: Interval-Exchange Coding, Factor Complexity 4n + 1, Projections, and Critical Exponent"
+  description: >-
+    Unconditional Lean 4 + Mathlib formalization (514 audited declarations, zero
+    sorry, zero native_decide, standard axioms only) resolving all four
+    questions and observations (Q1, Q2, O1, O2) from Badkobeh and Ochem
+    (Theoret. Comput. Sci. 588, 2015) for the 5-letter morphic fixed point
+    b5 = f5^omega(0) (0 -> 01, 1 -> 23, 2 -> 4, 3 -> 21, 4 -> 0). The library
+    identifies b5 as the exact 5-interval coding of a golden-ratio 3-interval
+    exchange on (-phi^2/2, phi^3/2) via the -1/phi left eigenvector, proving
+    unconditionally that (Q1) b5 has exact factor complexity 4n + 1 for every
+    n >= 0, (O1) g_fib(b5) has the exact same factors as the Fibonacci word with
+    complexity n + 1, (O2) g_rf(b5) has the exact same factors as the
+    Rote-Fibonacci word with complexity 2n for n >= 1, and (Q2) the critical
+    exponent of b5 is exactly (5 + sqrt(5))/4 and is strictly unattained. It
+    also proves the sharp second-order bound |w|/p < (5 + sqrt(5))/4 -
+    (7 - sqrt(5))/(8p) with exact unattained deficit infimum (7 - sqrt(5))/4,
+    asymptotic critical exponent E*(b5) = (5 + sqrt(5))/4, irrationality of
+    E(b5), reversal-swap (3 <-> 4) language invariance, ternary 3-IET collapse
+    complexity 2n + 1, unbounded balance defect, and the exact 5th-order A005252
+    length recurrence. Companion manuscript and verification archive:
+    https://mathdiscoveries.org/results/badkobeh-ochem-word-b5.
+  authors:
+    - "Tyler B. Hughes"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Tyler B. Hughes"
+
+classification:
+  arxiv: ["math.CO", "cs.FL"]
+  msc2020: ["68R15", "37B10", "11B85"]
+
+sources:
+  - title: "Badkobeh-Ochem's Word b5: Interval-Exchange Coding, Complexity 4n + 1, Rote-Fibonacci, and Critical Exponent"
+    authors:
+      - "Tyler B. Hughes"
+    id: "https://mathdiscoveries.org/results/badkobeh-ochem-word-b5"
+    type: original-proof
+    location: "Companion manuscript, verification archive, and prior-work search log at https://mathdiscoveries.org/results/badkobeh-ochem-word-b5"
+    relationship: other
+    author_endorsement: participated
+    note: >-
+      Original proofs, companion manuscript, and complete Lean 4 + Mathlib
+      formalization produced by AI research agents built and directed by Tyler
+      B. Hughes. Resolves both explicit questions (Q1, Q2) and both observations
+      (O1, O2) from Badkobeh and Ochem (2015), together with the 3-interval
+      exchange coding, sharp second-order deficit bound, asymptotic critical
+      exponent, irrationality, reversal-swap symmetry, ternary 3-IET collapse,
+      unbounded balance defect, and 5th-order A005252 length recurrence. Not
+      found in the searches logged (Badkobeh and Ochem 2015 and their sequel
+      arXiv:2312.10757v2 / author copy of TCS 1072, 2026 #115875 were read in
+      full; publisher copy of TCS 1072 returned HTTP 403). No human
+      mathematician has yet refereed the proof.
+  - title: "Characterization of some binary words with few squares"
+    authors:
+      - "Golnaz Badkobeh"
+      - "Pascal Ochem"
+    id: "https://doi.org/10.1016/j.tcs.2015.04.018"
+    type: paper
+    location: "Theoretical Computer Science 588 (2015), 73-80"
+    relationship: background
+    note: >-
+      Introduces b5 = f5^omega(0), characterizes it by avoiding squares and the
+      16 forbidden factors F5 (Theorem 1), and poses the factor complexity
+      4n + 1, critical exponent (5 + sqrt(5))/4, and Fibonacci / Rote-Fibonacci
+      projection problems (Sections 3 and 5).
+    author_endorsement: not-contacted
+  - title: "More characterizations of morphic words"
+    authors:
+      - "Golnaz Badkobeh"
+      - "Pascal Ochem"
+    id: "https://arxiv.org/abs/2312.10757"
+    type: paper
+    location: "arXiv:2312.10757v2 (2025); Theoretical Computer Science 1072 (2026), 115875"
+    relationship: background
+    note: "Restates b5 and related morphic characterizations without proving its complexity, Fibonacci/Rote-Fibonacci projections, or critical exponent."
+    author_endorsement: not-contacted
+  - title: "A study of the Rote-Fibonacci word"
+    authors:
+      - "Chen Fei Du"
+      - "Hamoon Mousavi"
+      - "Luke Schaeffer"
+      - "Jeffrey Shallit"
+    id: "https://doi.org/10.1016/j.tcs.2015.08.005"
+    type: paper
+    location: "Theoretical Computer Science 628 (2016), 88-100"
+    relationship: background
+    note: "Defines and analyzes the Rote-Fibonacci word r referenced in Observation (O2)."
+    author_endorsement: not-contacted
+
+related_formalizations: []
+
+status:
+  scope: >-
+    Complete, unconditional Lean 4 + Mathlib proof of all 4 headline questions
+    and observations (Q1, Q2, O1, O2) from Badkobeh and Ochem (2015) and all 10
+    theorem parts of the companion manuscript (514 audited public declarations
+    in BadkobehOchemB5, zero sorry, zero native_decide, standard axioms only):
+    5-interval coding of b5 via the golden-ratio 3-interval exchange on
+    (-phi^2/2, phi^3/2), exact factor complexity 4n + 1 for every n >= 0,
+    exact language equality of g_fib(b5) with the Fibonacci word (complexity
+    n + 1), exact language equality of g_rf(b5) with the Rote-Fibonacci word
+    (complexity 2n for n >= 1), exact unattained critical exponent
+    (5 + sqrt(5))/4 across all 338 seed buckets in-kernel, sharp second-order
+    bound |w|/p < (5 + sqrt(5))/4 - (7 - sqrt(5))/(8p) with exact unattained
+    deficit infimum (7 - sqrt(5))/4, asymptotic critical exponent
+    E*(b5) = (5 + sqrt(5))/4, irrationality of E(b5), reversal-swap (3 <-> 4)
+    invariance, ternary 3-IET collapse complexity 2n + 1, unbounded balance
+    defect, and 5th-order A005252 prefix-length recurrence. The supporting
+    library also re-proves square-freeness and F5 avoidance as corollaries
+    (not included in the compared original-proof challenge statements).
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+
+automation:
+  methods:
+    - method: agent
+      models: []
+      framework: "AI research agents built and directed by Tyler B. Hughes"
+      tool_setup: >-
+        AI research agents built and directed by Tyler B. Hughes discovered the
+        3-interval exchange coding, Cayley-Hamilton 338-seed reduction, and
+        5-block Rote-Fibonacci factorization, and built and verified the Lean 4
+        + Mathlib formalization.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "local machine"
+      prompting_notes: "Goal-directed mathematical discovery and Lean 4 formalization."
+  spend_usd: "not tracked"
+  notes: >-
+    Generated and checked by AI research agents built and directed by Tyler B.
+    Hughes. No human mathematician has yet refereed the proof.
+
+fidelity:
+  divergences: >-
+    None. All 4 of 4 headline questions and observations on
+    mathdiscoveries.org/results/badkobeh-ochem-word-b5 and all 10 theorem parts
+    of the companion manuscript (Draft 3) are formalized unconditionally in
+    Lean 4 + Mathlib with exact statement fidelity.
+
+review:
+  status: agent-reviewed
+  reviewers:
+    - "AI review agents directed by Tyler B. Hughes"
+  notes: >-
+    Audited by AI review agents for statement fidelity and checked via
+    BadkobehOchemB5/Verify.lean (514 audited declarations, zero sorry, zero
+    native_decide, standard axioms propext, Quot.sound, Classical.choice only).
+    Independent kernel verification is recorded in Palomar's mechanical
+    verification report. No human mathematician has yet refereed the proof.
+
+alignment:
+  namespace: "BadkobehOchemB5Challenge"
+  theorems:
+    - name: "b5_codes_interval_translation"
+      informal: "For every p >= 0, x_p = lambda'(b5[0..p)) lies strictly inside (-phi^2/2, phi^3/2) and b5(p) is uniquely determined by the 5 open subintervals P_2, P_0, P_4, P_1, P_3 of the golden-ratio 3-interval exchange."
+    - name: "b5_factor_complexity"
+      informal: "Question (Q1): For every n >= 0, b5 has exact factor complexity p_{b5}(n) = 4n + 1."
+    - name: "b5_sturmian_projection"
+      informal: "Observation (O1): For every n >= 0, g_fib(b5) has the exact same length-n factors as the Fibonacci word f and exact factor complexity n + 1."
+    - name: "b5_rote_fibonacci_projection"
+      informal: "Observation (O2): For every n >= 0, g_rf(b5) has the exact same length-n factors as the Rote-Fibonacci word r, and factor complexity 2n for n >= 1."
+    - name: "b5_critical_exponent"
+      informal: "Question (Q2): The critical exponent of b5 is exactly (5 + sqrt(5))/4 and is never attained by any factor."
+    - name: "b5_sharp_second_order_and_deficit"
+      informal: "Every factor w of b5 with period p >= 1 satisfies |w|/p < (5 + sqrt(5))/4 - (7 - sqrt(5))/(8p), and the infimum of the deficit phi*p - 2(|w| - p) is exactly (7 - sqrt(5))/4 and is never attained."
+    - name: "b5_asymp_critExp_and_irrational"
+      informal: "The asymptotic critical exponent E*(b5) equals (5 + sqrt(5))/4 for every period lower bound L, and E(b5) is irrational."
+    - name: "b5_language_rev_swap34_invariant"
+      informal: "The factor language of b5 is invariant under word reversal composed with the letter involution swapping 3 and 4."
+    - name: "pi3B5_factor_complexity"
+      informal: "The ternary 3-IET collapse pi_3(b5) has exact factor complexity 2n + 1 for every n >= 0."
+    - name: "b5_not_C_balanced"
+      informal: "The word b5 has unbounded balance defect: it is not C-balanced for any natural number C."
+    - name: "fB5_iter_length_rec"
+      informal: "Iterated lengths of f5 satisfy the exact 5th-order A005252 recurrence |f5^{k+5}(w)| + |f5^{k+2}(w)| = |f5^{k+4}(w)| + |f5^{k+3}(w)| + |f5^{k+1}(w)| + |f5^k(w)|."

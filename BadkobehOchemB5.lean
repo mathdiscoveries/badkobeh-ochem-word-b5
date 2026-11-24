@@ -1,0 +1,10 @@
+module
+
+public import BadkobehOchemB5.Defs
+public import BadkobehOchemB5.ComplexityAndSturmian
+public import BadkobehOchemB5.SeedsCert
+public import BadkobehOchemB5.CriticalExponent
+public import BadkobehOchemB5.XYXRelation
+public import BadkobehOchemB5.RoteFibonacci
+public import BadkobehOchemB5.SharpCriticalExponent
+public import BadkobehOchemB5.StructuralProperties
