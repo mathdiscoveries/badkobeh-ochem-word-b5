@@ -58,7 +58,7 @@ sources:
     authors:
       - "Golnaz Badkobeh"
       - "Pascal Ochem"
-    id: "https://doi.org/10.1016/j.tcs.2015.04.018"
+    id: "https://doi.org/10.1016/j.tcs.2015.03.044"
     type: paper
     location: "Theoretical Computer Science 588 (2015), 73-80"
     relationship: background
@@ -78,15 +78,16 @@ sources:
     relationship: background
     note: "Restates b5 and related morphic characterizations without proving its complexity, Fibonacci/Rote-Fibonacci projections, or critical exponent."
     author_endorsement: not-contacted
-  - title: "A study of the Rote-Fibonacci word"
+  - title: "Decision algorithms for Fibonacci-automatic words, II: Related sequences and avoidability"
     authors:
       - "Chen Fei Du"
       - "Hamoon Mousavi"
+      - "Eric Rowland"
       - "Luke Schaeffer"
       - "Jeffrey Shallit"
-    id: "https://doi.org/10.1016/j.tcs.2015.08.005"
+    id: "https://doi.org/10.1016/j.tcs.2016.10.005"
     type: paper
-    location: "Theoretical Computer Science 628 (2016), 88-100"
+    location: "Theoretical Computer Science 657 (2017), 146-162; preprint arXiv:1406.0670v4 (Figure 18, Theorem 35)"
     relationship: background
     note: "Defines and analyzes the Rote-Fibonacci word r referenced in Observation (O2)."
     author_endorsement: not-contacted
