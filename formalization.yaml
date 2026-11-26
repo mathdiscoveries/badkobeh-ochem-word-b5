@@ -22,7 +22,13 @@ project:
     E(b5), reversal-swap (3 <-> 4) language invariance, ternary 3-IET collapse
     complexity 2n + 1, unbounded balance defect, and the exact 5th-order A005252
     length recurrence. Companion manuscript and verification archive:
-    https://mathdiscoveries.org/results/badkobeh-ochem-word-b5.
+    https://mathdiscoveries.org/results/badkobeh-ochem-word-b5. Coverage by
+    this package's Palomar comparison: the four headline questions and
+    observations Q1, Q2, O1 and O2 are compared in Lean, 4 of 4 (100%); of
+    the companion paper's 10 theorem parts, 3 are compared in full (30%;
+    parts 1(A), 2(A) and 5(B)) and 5 in part (2(B), 3(B), 4(A), 4(B) and
+    5(A)), and parts 1(B) and 3(A), with the uncompared pieces of the five
+    partial parts, are proved in this package's Lean library but not compared.
   authors:
     - "Tyler B. Hughes"
   license: "Apache-2.0"
@@ -143,10 +149,11 @@ automation:
 
 fidelity:
   divergences: >-
-    None. All 4 of 4 headline questions and observations on
-    mathdiscoveries.org/results/badkobeh-ochem-word-b5 and all 10 theorem parts
-    of the companion manuscript (Draft 3) are formalized unconditionally in
-    Lean 4 + Mathlib with exact statement fidelity.
+    None for the compared statements. All 4 of 4 headline questions and
+    observations on mathdiscoveries.org/results/badkobeh-ochem-word-b5 are
+    compared; of the 10 theorem parts of the companion manuscript (Draft 3),
+    3 are compared in full and 5 in part, and the rest are proved in the
+    supporting library without being compared (see project.description).
 
 review:
   status: agent-reviewed
