@@ -4,6 +4,8 @@
 
 Unconditional Lean 4 (`v4.35.0`) + Mathlib (`v4.35.0`) formalization (514 audited declarations, zero `sorry`, zero `native_decide`, standard axioms `propext`, `Quot.sound`, `Classical.choice` only) resolving all four questions and observations (Q1, Q2, O1, O2) from Badkobeh and Ochem (*Theoret. Comput. Sci.* 588, 2015) for the 5-letter fixed point `b5 = f5^ω(0)` (`0 ↦ 01, 1 ↦ 23, 2 ↦ 4, 3 ↦ 21, 4 ↦ 0`).
 
+Coverage by this package's Palomar comparison: the four headline questions and observations are compared in Lean, 4 of 4 (100%). Of the companion paper's 10 theorem parts, 3 are compared in full (30%; parts 1(A), 2(A) and 5(B)) and 5 in part (2(B), 3(B), 4(A), 4(B) and 5(A)); parts 1(B) and 3(A), with the uncompared pieces of the five partial parts, are proved in this package's Lean library but not compared.
+
 Companion manuscript, interactive Proof Blueprint, and verification archive:
 <https://mathdiscoveries.org/results/badkobeh-ochem-word-b5>
 
