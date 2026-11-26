@@ -38,22 +38,25 @@ sources:
     authors:
       - "Tyler B. Hughes"
     id: "https://mathdiscoveries.org/results/badkobeh-ochem-word-b5"
-    type: original-proof
-    location: "Companion manuscript, verification archive, and prior-work search log at https://mathdiscoveries.org/results/badkobeh-ochem-word-b5"
-    relationship: other
+    type: paper
+    location: "https://mathdiscoveries.org/results/badkobeh-ochem-word-b5"
+    relationship: formalizes
     author_endorsement: participated
     note: >-
-      Original proofs, companion manuscript, and complete Lean 4 + Mathlib
-      formalization produced by AI research agents built and directed by Tyler
-      B. Hughes. Resolves both explicit questions (Q1, Q2) and both observations
-      (O1, O2) from Badkobeh and Ochem (2015), together with the 3-interval
-      exchange coding, sharp second-order deficit bound, asymptotic critical
-      exponent, irrationality, reversal-swap symmetry, ternary 3-IET collapse,
-      unbounded balance defect, and 5th-order A005252 length recurrence. Not
-      found in the searches logged (Badkobeh and Ochem 2015 and their sequel
-      arXiv:2312.10757v2 / author copy of TCS 1072, 2026 #115875 were read in
-      full; publisher copy of TCS 1072 returned HTTP 403). No human
-      mathematician has yet refereed the proof.
+      The companion paper. It states and proves in writing every compared
+      statement of this package (Theorems 1(A), 2(A), 2(B), 3(B), 4(A), 4(B),
+      5(A) and 5(B)), and the Lean work formalizes them; the formalization
+      presents no result that the paper does not. The finite check over the
+      338 short seeds in the proof of Theorem 4 is stated and explained in the
+      paper and is evaluated in the Lean kernel here. The paper answers both
+      questions (Q1, Q2) and both observations (O1, O2) of Badkobeh and Ochem
+      (2015), listed below. No prior proof of these statements was found in
+      the searches logged; Badkobeh and Ochem (2015) and their sequel
+      (arXiv:2312.10757v2, author copy of Theoret. Comput. Sci. 1072 (2026),
+      115875) were read in full, and the publisher copy of the sequel returned
+      HTTP 403 and is unread. AI research agents built and directed by Tyler
+      B. Hughes generated and checked this work. No human mathematician has
+      yet refereed the proof.
   - title: "Characterization of some binary words with few squares"
     authors:
       - "Golnaz Badkobeh"
@@ -111,8 +114,9 @@ status:
     E*(b5) = (5 + sqrt(5))/4, irrationality of E(b5), reversal-swap (3 <-> 4)
     invariance, ternary 3-IET collapse complexity 2n + 1, unbounded balance
     defect, and 5th-order A005252 prefix-length recurrence. The supporting
-    library also re-proves square-freeness and F5 avoidance as corollaries
-    (not included in the compared original-proof challenge statements).
+    library also proves square-freeness and F5 avoidance (both contained in
+    Theorem 1 of Badkobeh and Ochem 2015) as corollaries; these are not
+    among the compared statements.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Quot.sound", "Classical.choice"]
