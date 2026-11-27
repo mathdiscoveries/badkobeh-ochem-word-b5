@@ -37,8 +37,8 @@ This module establishes five structural theorems for `b_5 = f_5^ω(0)` beyond th
    `F_5` is closed under `revSwap34`.
 5. **Exact 5th-Order Prefix-Length Recurrence (`stepMZ_charpoly`, `fB5_iter_length_rec`)**:
    From the exact characteristic polynomial `x^5 - x^4 - x^3 + x^2 - x - 1` of the incidence matrix
-   `M` of `f_5`, every iterate length sequence `|f_5^k(w)|` (in particular OEIS `A005252` for
-   `w = [0]`) satisfies
+   `M` of `f_5`, every iterate length sequence `|f_5^k(w)|` satisfies (for `w = [0]` the term at
+   index `k` is OEIS `A005252(k + 3)`, using OEIS offset zero)
    `|f_5^{k+5}(w)| + |f_5^{k+2}(w)| = |f_5^{k+4}(w)| + |f_5^{k+3}(w)| + |f_5^{k+1}(w)| + |f_5^k(w)|`.
 -/
 

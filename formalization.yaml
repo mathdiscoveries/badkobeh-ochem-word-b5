@@ -21,7 +21,10 @@ project:
     asymptotic critical exponent E*(b5) = (5 + sqrt(5))/4, irrationality of
     E(b5), reversal-swap (3 <-> 4) language invariance, ternary 3-IET collapse
     complexity 2n + 1, unbounded balance defect, and the exact 5th-order
-    A005252 length recurrence. Companion manuscript and verification archive:
+    length recurrence satisfied by f5-iterate lengths of every starting word
+    (for the seed [0] the lengths are OEIS A005252(k + 3), offset zero; that
+    single-seed identification is not stated in Lean). Companion manuscript
+    and verification archive:
     https://mathdiscoveries.org/results/badkobeh-ochem-word-b5. Coverage by
     this package's Palomar comparison: the four headline questions and
     observations Q1, Q2, O1 and O2 are compared in Lean, 4 of 4 (100%); of the
@@ -212,6 +215,45 @@ sources:
       depth: Lemma 4.3, Theorem A and Section 4.3 read in the authors'
       revised copy (irif.fr/~berthe/Articles/BlueTheorem-Revised.pdf).
     author_endorsement: not-contacted
+  - title: "Codages de rotations et phénomènes d'autosimilarité"
+    authors:
+      - "Boris Adamczewski"
+    id: "https://doi.org/10.5802/jtnb.363"
+    type: paper
+    location: "Journal de Théorie des Nombres de Bordeaux 14(2) (2002), 351-386, Section 4.2, Lemme 4.9, pages 364 and 365"
+    relationship: independently-proves
+    note: >-
+      Lemme 4.9 proves that the coding of the orbit of 0 under a
+      three-interval exchange satisfying the i.d.o.c. condition has
+      complexity exactly 2n + 1 for every n >= 1. The compared
+      pi3B5_factor_complexity independently gives this count (and the
+      trivial n = 0 case) for the nondegenerate ternary coding pi_3(b5);
+      the identification of that coding and the check of its cut orbits are
+      the companion paper's. Read depth: the statement and proof of Lemme
+      4.9 read in the Numdam scan; the rest of the paper is not recorded as
+      read [to check].
+    author_endorsement: not-contacted
+  - title: "Combinatorial properties of infinite words associated with cut-and-project sequences"
+    authors:
+      - "Louis-Sébastien Guimond"
+      - "Zuzana Masáková"
+      - "Edita Pelantová"
+    id: "https://doi.org/10.5802/jtnb.422"
+    type: paper
+    location: "Journal de Théorie des Nombres de Bordeaux 15(3) (2003), 697-725, Section 5, Definition 5.1 and Theorem 5.3, pages 709 to 711"
+    relationship: independently-proves
+    note: >-
+      Section 5 identifies the stepping function of a cut-and-project
+      sequence with a three-interval exchange of permutation (3,2,1), and
+      Theorem 5.3 proves C(n) = 2n + 1 for all n when the window length d is
+      not in Z[epsilon]. The compared pi3B5_factor_complexity gives this count
+      for pi_3(b5); the cross-family editorial audit identified its exchange
+      as an instance of the first case of Theorem 5.3 (window length
+      1 + 3phi/2, outside Z[phi]), which the package authors have not
+      re-derived. The credit is limited to that count. Read depth: Section
+      5, Definition 5.1, Theorem 5.3 and its proof read in the Numdam scan;
+      the rest of the paper is not recorded as read [to check].
+    author_endorsement: not-contacted
   - title: "Structure of three-interval exchange transformations II: a combinatorial description of the trajectories"
     authors:
       - "Sébastien Ferenczi"
@@ -248,6 +290,35 @@ sources:
       full, as recorded in the companion's references-checked.md row
       lenz2011.
     author_endorsement: not-contacted
+  - title: "A generalization of Fibonacci numbers"
+    authors:
+      - "V. C. Harris"
+      - "Carolyn C. Styles"
+    id: "https://www.fq.math.ca/Scanned/2-4/harris.pdf"
+    type: paper
+    location: "The Fibonacci Quarterly 2(4) (1964), 277-289, Section 2, equations (2.1)-(2.2) with p = q = 2"
+    relationship: background
+    note: >-
+      The numbers u(n; 2, 2) start 1, 1, 1, 1, 2 and satisfy
+      u(n) - 2u(n - 1) + u(n - 2) = u(n - 4), which is OEIS A005252. The
+      lengths |f5^k([0])| are A005252(k + 3); the compared
+      fB5_iter_length_rec is a recurrence for every starting word, and the
+      word-morphism statement is the companion paper's. Read depth: Section
+      2 read in the journal scan; the rest is not recorded as read
+      [to check].
+  - title: "OEIS A005252"
+    authors:
+      - "The OEIS Foundation"
+    id: "https://oeis.org/A005252"
+    type: other
+    location: "Sequence A005252, offset 0 (terms 1, 1, 1, 1, 2, 4, 7, 11, ...)"
+    relationship: background
+    note: >-
+      With offset zero, |f5^k([0])| = A005252(k + 3) for every k (checked for
+      k <= 13 against the b-file). The compared fB5_iter_length_rec states a
+      5th-order recurrence for every starting word; the OEIS 4th-order
+      polynomial x^4 - 2x^3 + x^2 - 1 times (x + 1) is the 5th-order
+      polynomial in that theorem.
   - title: "Symbolic Dynamics II. Sturmian Trajectories"
     authors:
       - "Marston Morse"
@@ -284,10 +355,11 @@ status:
     unattained deficit infimum (7 - sqrt(5))/4, asymptotic critical exponent
     E*(b5) = (5 + sqrt(5))/4, irrationality of E(b5), reversal-swap (3 <-> 4)
     invariance, ternary 3-IET collapse complexity 2n + 1, unbounded balance
-    defect, and 5th-order A005252 prefix-length recurrence. The supporting
-    library also proves square-freeness and F5 avoidance (both contained in
-    Theorem 1 of Badkobeh and Ochem 2015) as corollaries; these are not among
-    the compared statements.
+    defect, and the 5th-order prefix-length recurrence for every starting word
+    (A005252(k + 3) for the seed [0], an identification not stated in Lean).
+    The supporting library also proves square-freeness and F5 avoidance (both
+    contained in Theorem 1 of Badkobeh and Ochem 2015) as corollaries; these
+    are not among the compared statements.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Quot.sound", "Classical.choice"]

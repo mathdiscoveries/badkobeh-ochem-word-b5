@@ -21,7 +21,7 @@ Companion manuscript, interactive Proof Blueprint, and verification archive:
 8. `b5_language_rev_swap34_invariant` — invariance of the factor language under reversal composed with `3 ↔ 4`.
 9. `pi3B5_factor_complexity` — ternary 3-IET collapse `π₃(b5)` complexity `2n + 1`.
 10. `b5_not_C_balanced` — unbounded balance defect (`b5` is not `C`-balanced for any `C`).
-11. `fB5_iter_length_rec` — exact 5th-order `A005252` length recurrence.
+11. `fB5_iter_length_rec` — exact 5th-order length recurrence for the iterate lengths of every starting word (for the seed `[0]` the lengths are OEIS `A005252(k + 3)`, offset zero; that identification is not stated in Lean).
 
 ## Verification
 
