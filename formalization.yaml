@@ -175,8 +175,9 @@ sources:
       symmetric Rote sequence if and only if u is a Sturmian sequence.", where
       [30] is this paper and u is the difference sequence of v modulo 2. Du et
       al. (arXiv:1406.0670v4, page 37) derive "Theorem 43. The Rote-Fibonacci
-      word has subword complexity 2n." from their Corollary 36 (the first
-      differences of the Rote-Fibonacci word modulo 2 give the Fibonacci word)
+      word has subword complexity 2n." from their Corollary 36 ("The first
+      differences of the Rote-Fibonacci word r, taken modulo 2, give the
+      complement of the Fibonacci word f, with its first symbol omitted.")
       "together with [66, Thm. 3]", [66] being this paper. The compared
       b5_rote_fibonacci_projection gives the 2n count for the Rote-Fibonacci
       word at positive lengths. Rote's paper itself is unread (paywalled) [to
