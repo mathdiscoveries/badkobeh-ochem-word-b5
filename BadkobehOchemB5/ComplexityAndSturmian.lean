@@ -252,6 +252,9 @@ noncomputable def cutMidpt (J_lo J_hi : ℝ) (S : Finset ℝ) {M : ℕ} (hS : S.
 
 /-- General piecewise-translation itinerary theorem:
 Given an interval `(J_lo, J_hi)` cut at `S` (`S.card = M`) where `x ∈ S ↔ ∃ k < n, step^[k] x ∈ C`,
+and where `step` is a translation into the interval with constant readout `letOf` on each piece
+between cuts in `C` (`h_trans`), and any two points separated by a cut read different letters, so
+distinct components of the complement of `C` carry distinct letters (`h_sep`),
 the `M + 1` interval-midpoint itineraries `itin(mid_m)` are **pairwise distinct** AND equal the
 exact set `FactorsOfLen W n` of ANY infinite word `W` coded by a dense `step`-orbit in `(J_lo, J_hi)`. -/
 theorem factorsOfLen_eq_range_of_iet {α : Type*} {J_lo J_hi : ℝ}

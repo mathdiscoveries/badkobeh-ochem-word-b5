@@ -155,6 +155,22 @@ sources:
       that count, and the equality with the factor language of g_fib(b5) is
       the companion paper's. The rest of this paper is not recorded as read.
     author_endorsement: not-contacted
+  - title: "Sequences with subword complexity 2n"
+    authors:
+      - "Günter Rote"
+    id: "https://doi.org/10.1006/jnth.1994.1012"
+    type: paper
+    location: "Journal of Number Theory 46(2) (1994), 196-213, Theorem 3"
+    relationship: independently-proves
+    note: >-
+      The compared theorem b5_rote_fibonacci_projection independently gives
+      the 2n complexity count for the Rote-Fibonacci word at positive
+      lengths. Du et al. (arXiv:1406.0670v4, Theorem 43) derive this case
+      from Rote's Theorem 3 and their Corollary 36. The equality of factor
+      languages with g_rf(b5) is the companion paper's result. Metadata
+      checked against Crossref; Rote's paper is recorded as unread (paywalled)
+      [to check], as in the companion's references-checked.md row rote1994.
+    author_endorsement: not-contacted
   - title: "Symbolic Dynamics II. Sturmian Trajectories"
     authors:
       - "Marston Morse"
@@ -226,6 +242,14 @@ fidelity:
     compared; of the 10 theorem parts of the companion manuscript (Draft 3), 2
     are compared in full and 6 in part; the supporting library has
     declarations for the rest, with the limits stated in project.description.
+    The companion manuscript's Lemma lem:cut-noconn(1) asks only that the
+    letter readout jump across every cut; the Lean theorem
+    factorsOfLen_eq_range_of_iet also requires h_sep (any two points
+    separated by a cut read different letters, so distinct components of
+    the complement of the cuts carry distinct letters), without which the
+    lemma's count can fail. The
+    five-letter, ternary and binary codings to which the paper applies the
+    lemma satisfy h_sep, so the compared results are unaffected.
 
 review:
   status: agent-reviewed
