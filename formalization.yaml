@@ -28,9 +28,11 @@ project:
     companion paper's 10 theorem parts, 2 are compared in full (20%; parts
     2(A) and 5(B)) and 6 in part (1(A), 2(B), 3(B), 4(A), 4(B) and 5(A); part
     1(A) is compared through its coding statement, not its orbit equation
-    x_{p+1} = T(x_p)), and parts 1(B) and 3(A), with the uncompared pieces of
-    the six partial parts, are proved in this package's Lean library but not
-    compared.
+    x_{p+1} = T(x_p)), and parts 1(B) and 3(A) are not compared. The
+    supporting library has declarations for each uncompared part and piece;
+    for Theorem 4(B) it proves the inverse-power formula E_j = phi^-(11 + 6j),
+    and the paper's expansion of E_j in Fibonacci numbers is a further
+    identity not stated in Lean.
   authors:
     - "Tyler B. Hughes"
   license: "Apache-2.0"
@@ -135,6 +137,24 @@ sources:
       reference words; the projection equalities for b5 are the companion
       paper's. Read in full (arXiv v4).
     author_endorsement: not-contacted
+  - title: "Decision Algorithms for Fibonacci-Automatic Words, III: Enumeration and Abelian Properties"
+    authors:
+      - "Chen Fei Du"
+      - "Hamoon Mousavi"
+      - "Luke Schaeffer"
+      - "Jeffrey Shallit"
+    id: "https://doi.org/10.1142/S0129054116500386"
+    type: paper
+    location: "International Journal of Foundations of Computer Science 27(8) (2016), 943-963, Theorem 2"
+    relationship: independently-proves
+    note: >-
+      Journal counterpart of preprint Theorem 57: Theorem 2 (checked in the
+      authors' copy dated 2016-02-19) states that the Fibonacci word has
+      subword complexity n + 1. The compared theorem b5_sturmian_projection
+      also gives this count for the Fibonacci word; the credit is limited to
+      that count, and the equality with the factor language of g_fib(b5) is
+      the companion paper's. The rest of this paper is not recorded as read.
+    author_endorsement: not-contacted
   - title: "Symbolic Dynamics II. Sturmian Trajectories"
     authors:
       - "Marston Morse"
@@ -157,24 +177,24 @@ related_formalizations: []
 status:
   scope: >-
     Complete, unconditional Lean 4 + Mathlib proof of all 4 headline questions
-    and observations (Q1, Q2, O1, O2) from Badkobeh and Ochem (2015) and all
-    10 theorem parts of the companion manuscript (514 audited public
-    declarations in BadkobehOchemB5, zero sorry, zero native_decide, standard
-    axioms only): 5-interval coding of b5 via the golden-ratio 3-interval
-    exchange on (-phi^2/2, phi^3/2), exact factor complexity 4n + 1 for every
-    n >= 0, exact language equality of g_fib(b5) with the Fibonacci word
-    (complexity n + 1), exact language equality of g_rf(b5) with the
-    Rote-Fibonacci word (complexity 2n for n >= 1), exact unattained critical
-    exponent (5 + sqrt(5))/4, with the 338 short seeds covered by 336 distinct
-    summaries checked in the Lean kernel, sharp second-order bound |w|/p < (5
-    + sqrt(5))/4 - (7 - sqrt(5))/(8p) with exact unattained deficit infimum (7
-    - sqrt(5))/4, asymptotic critical exponent E*(b5) = (5 + sqrt(5))/4,
-    irrationality of E(b5), reversal-swap (3 <-> 4) invariance, ternary 3-IET
-    collapse complexity 2n + 1, unbounded balance defect, and 5th-order
-    A005252 prefix-length recurrence. The supporting library also proves
-    square-freeness and F5 avoidance (both contained in Theorem 1 of Badkobeh
-    and Ochem 2015) as corollaries; these are not among the compared
-    statements.
+    and observations (Q1, Q2, O1, O2) from Badkobeh and Ochem (2015) with
+    supporting declarations for each of the companion manuscript's 10 theorem
+    parts (514 audited public declarations in BadkobehOchemB5, zero sorry,
+    zero native_decide, standard axioms only): 5-interval coding of b5 via the
+    golden-ratio 3-interval exchange on (-phi^2/2, phi^3/2), exact factor
+    complexity 4n + 1 for every n >= 0, exact language equality of g_fib(b5)
+    with the Fibonacci word (complexity n + 1), exact language equality of
+    g_rf(b5) with the Rote-Fibonacci word (complexity 2n for n >= 1), exact
+    unattained critical exponent (5 + sqrt(5))/4, with the 338 short seeds
+    covered by 336 distinct summaries checked in the Lean kernel, sharp
+    second-order bound |w|/p < (5 + sqrt(5))/4 - (7 - sqrt(5))/(8p) with exact
+    unattained deficit infimum (7 - sqrt(5))/4, asymptotic critical exponent
+    E*(b5) = (5 + sqrt(5))/4, irrationality of E(b5), reversal-swap (3 <-> 4)
+    invariance, ternary 3-IET collapse complexity 2n + 1, unbounded balance
+    defect, and 5th-order A005252 prefix-length recurrence. The supporting
+    library also proves square-freeness and F5 avoidance (both contained in
+    Theorem 1 of Badkobeh and Ochem 2015) as corollaries; these are not among
+    the compared statements.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Quot.sound", "Classical.choice"]
@@ -204,8 +224,8 @@ fidelity:
     None for the compared statements. All 4 of 4 headline questions and
     observations on mathdiscoveries.org/results/badkobeh-ochem-word-b5 are
     compared; of the 10 theorem parts of the companion manuscript (Draft 3), 2
-    are compared in full and 6 in part, and the rest are proved in the
-    supporting library without being compared (see project.description).
+    are compared in full and 6 in part; the supporting library has
+    declarations for the rest, with the limits stated in project.description.
 
 review:
   status: agent-reviewed
