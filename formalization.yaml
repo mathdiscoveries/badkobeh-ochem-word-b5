@@ -171,6 +171,82 @@ sources:
       checked against Crossref; Rote's paper is recorded as unread (paywalled)
       [to check], as in the companion's references-checked.md row rote1994.
     author_endorsement: not-contacted
+  - title: "Représentation géométrique de suites de complexité 2n+1"
+    authors:
+      - "Pierre Arnoux"
+      - "Gérard Rauzy"
+    id: "https://doi.org/10.24033/bsmf.2164"
+    type: paper
+    location: "Bulletin de la Société Mathématique de France 119(2) (1991), 199-215, Remarque 3, p. 203"
+    relationship: independently-proves
+    note: >-
+      Remarque 3 states that the natural coding of an interval exchange on s
+      intervals, irrational in Keane's sense, has complexity (s - 1)n + 1.
+      The compared theorem pi3B5_factor_complexity gives the case s = 3 for
+      the ternary coding pi_3(b5): complexity 2n + 1 for every n. The
+      identification of this projection of b5 and the check of its cut
+      orbits are the companion paper's. Read depth: full text read (Numdam
+      open-access PDF), as recorded in the companion's references-checked.md
+      row arnoux1991.
+    author_endorsement: not-contacted
+  - title: "Sturm numbers and substitution invariance of 3iet words"
+    authors:
+      - "Pierre Arnoux"
+      - "Valérie Berthé"
+      - "Zuzana Masáková"
+      - "Edita Pelantová"
+    id: "https://arxiv.org/abs/0710.5845"
+    type: paper
+    location: "Integers 8(1) (2008), Article A14 (Zbl 1202.11021), Lemma 4.3, Theorem A and Section 4.3"
+    relationship: independently-proves
+    note: >-
+      Section 4.3 proves the bound C(n) <= 2n + 1 for 3iet words by counting
+      preimages of the two discontinuity points, the argument the companion
+      uses for pi3B5_factor_complexity. Lemma 4.3 and Theorem A show that
+      the sigma image (A -> 0, B -> 01, C -> 1) of an aperiodic 3iet word is
+      Sturmian; the compared b5_sturmian_projection gives that conclusion
+      (complexity n + 1) for sigma_01(pi_3(b5)), which the supporting
+      library identifies with g_fib(b5). The identification of that
+      language with the Fibonacci language is the companion paper's. Read
+      depth: Lemma 4.3, Theorem A and Section 4.3 read in the authors'
+      revised copy (irif.fr/~berthe/Articles/BlueTheorem-Revised.pdf).
+    author_endorsement: not-contacted
+  - title: "Structure of three-interval exchange transformations II: a combinatorial description of the trajectories"
+    authors:
+      - "Sébastien Ferenczi"
+      - "Charles Holton"
+      - "Luca Q. Zamboni"
+    id: "https://doi.org/10.1007/BF02893083"
+    type: paper
+    location: "Journal d'Analyse Mathématique 89 (2003), 239-276, Section 3"
+    relationship: independently-proves
+    note: >-
+      Part II (distinct from Part I, Ann. Inst. Fourier 2001, which the
+      companion's references-checked.md records as read) gives the 2n + 1
+      complexity of codings of three-interval exchanges; the compared
+      pi3B5_factor_complexity gives this count for pi_3(b5). Metadata checked
+      against Crossref; the section was located by the cross-family
+      editorial audit, and the paywalled paper is not recorded as read
+      [to check].
+    author_endorsement: not-contacted
+  - title: "Note on powers in three interval exchange transformations"
+    authors:
+      - "Daniel Lenz"
+      - "Zuzana Masáková"
+      - "Edita Pelantová"
+    id: "https://doi.org/10.1016/j.tcs.2011.03.027"
+    type: paper
+    location: "Theoretical Computer Science 412(29) (2011), 3788-3794, Theorem 3"
+    relationship: independently-proves
+    note: >-
+      Theorem 3 restates that sigma_01(u) is Sturmian for every 3iet word u
+      (sigma_01: A -> 0, B -> 01, C -> 1). The compared b5_sturmian_projection
+      proves the Sturmian conclusion for sigma_01(pi_3(b5)); the
+      identification of its language with the Fibonacci language is the
+      companion paper's. Read depth: author version arXiv:0909.1109 read in
+      full, as recorded in the companion's references-checked.md row
+      lenz2011.
+    author_endorsement: not-contacted
   - title: "Symbolic Dynamics II. Sturmian Trajectories"
     authors:
       - "Marston Morse"

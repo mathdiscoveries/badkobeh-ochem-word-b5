@@ -58,6 +58,21 @@
       "identifier": "https://doi.org/10.1006/jnth.1994.1012",
       "relation": "references",
       "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://doi.org/10.24033/bsmf.2164",
+      "relation": "references",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://doi.org/10.1007/BF02893083",
+      "relation": "references",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.tcs.2011.03.027",
+      "relation": "references",
+      "resource_type": "publication-article"
     }
   ],
   "notes": "Unrefereed. Generated and checked by AI research agents built and directed by Tyler B. Hughes."
