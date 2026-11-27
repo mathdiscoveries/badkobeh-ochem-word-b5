@@ -20,11 +20,12 @@ This module establishes five structural theorems for `b_5 = f_5^ω(0)` beyond th
    Using the exact affine involution `S(x) = φ / 2 - x` on `J = (-φ^2 / 2, φ^3 / 2)` satisfying
    `S(T(P_a)) = P_{swap34(a)}` and `T(S(T(x))) = S(x)`, we prove
    `IsFactorInf w b5 ↔ IsFactorInf (revSwap34 w) b5` for every finite word `w : List (Fin 5)`.
-2. **Ternary 3-IET Collapse & Lenz–Masáková–Pelantová Factorization (`gFib_eq_sigma01_comp_pi3`,
+2. **Ternary 3-IET Collapse & Factorization of `g_fib` through `σ_{01}` (`gFib_eq_sigma01_comp_pi3`,
    `pi3B5_factor_complexity`)**:
    Under `π_3 : {1,3,4} ↦ 0, 0 ↦ 1, 2 ↦ 2` and `σ_{01} : 0 ↦ 0, 1 ↦ 01, 2 ↦ 1`, Badkobeh–Ochem's
-   Sturmian projection factors identically as `g_fib = σ_{01} ∘ π_3` (matching Lenz–Masáková–
-   Pelantová, *TCS* 412 (2011), Theorem 3), and the ternary 3-IET word `π_3(b_5)` has exact factor
+   Sturmian projection factors identically as `g_fib = σ_{01} ∘ π_3` (the morphism `σ_{01}` occurs
+   in Lenz–Masáková–Pelantová, *TCS* 412 (2011), Theorem 3, on ternary 3iet words; the five-letter
+   identity is checked here letter by letter), and the ternary 3-IET word `π_3(b_5)` has exact factor
    complexity `factorComplexity pi3B5 n = 2 * n + 1` for every `n : ℕ`.
 3. **Unbounded Balance Defect (`b5_not_C_balanced`, `b5_not_balanced`)**:
    Via the exact integer `(-1)`-eigenvector functional
@@ -285,7 +286,7 @@ theorem b5_language_rev_swap34_invariant (w : List (Fin 5)) :
     have h2 := isFactorInf_revSwap34_of_isFactorInf h
     rwa [revSwap34_involutive] at h2
 
-/-! ## Section 2: Ternary 3-IET Collapse `π_3(b_5)` (`2n + 1`) & Lenz–Masáková–Pelantová Factorization -/
+/-! ## Section 2: Ternary 3-IET Collapse `π_3(b_5)` (`2n + 1`) & Factorization of `g_fib` through `σ_{01}` -/
 
 /-- The 3-interval collapse `π_3 : {1,3,4} ↦ 0 (A), 0 ↦ 1 (B), 2 ↦ 2 (C)`. -/
 def pi3 : Fin 5 → Fin 3
@@ -310,8 +311,9 @@ theorem sigma01_nonempty : ∀ a : Fin 3, sigma01 a ≠ [] := by
 def pi3B5 (p : ℕ) : Fin 3 :=
   pi3 (b5 p)
 
-/-- **Lenz–Masáková–Pelantová (2011, Theorem 3) Factorization (`gFib_eq_sigma01_comp_pi3`)**:
-Badkobeh–Ochem's Sturmian projection factors identically as `g_fib = σ_{01} ∘ π_3`. -/
+/-- **Factorization of Badkobeh and Ochem's `g_fib` through `σ_{01}` (`gFib_eq_sigma01_comp_pi3`)**:
+The morphism `σ_{01}` occurs in Lenz, Masáková and Pelantová (2011, Theorem 3). Here the five
+letter images give `g_fib = σ_{01} ∘ π_3`. -/
 theorem gFib_eq_sigma01_comp_pi3 (w : List (Fin 5)) :
     applyMorph gFib w = applyMorph sigma01 (w.map pi3) := by
   induction w with
@@ -832,9 +834,10 @@ theorem b5_avoids_F5 : ∀ w ∈ badkobehOchemF5, ¬ IsFactorInf w b5 := by
 
 /-! ## Section 5: Characteristic Polynomial of `M` & Exact `A005252` Prefix-Length Recurrence -/
 
-/-- Exact Cayley–Hamilton identity for the `5 × 5` incidence matrix `M` of `f_5`:
-`M^5 v + M^2 v = M^4 v + M^3 v + M v + v` (characteristic polynomial
-`x^5 - x^4 - x^3 + x^2 - x - 1 = (x + 1)(x^2 - x - 1)(x^2 - x + 1)`). -/
+/-- Coordinate-sum consequence of the characteristic polynomial
+`x^5 - x^4 - x^3 + x^2 - x - 1 = (x + 1)(x^2 - x - 1)(x^2 - x + 1)` of the `5 × 5` incidence
+matrix `M` of `f_5`. Writing `s(v)` for the sum of the five coordinates, this proves
+`s(M^5 v) + s(M^2 v) = s(M^4 v) + s(M^3 v) + s(M v) + s(v)`, an equality in `ℤ`, not of vectors. -/
 theorem stepMZ_charpoly (v : Vec5Z) :
     (stepMZ (stepMZ (stepMZ (stepMZ (stepMZ v))))).sum + (stepMZ (stepMZ v)).sum =
     (stepMZ (stepMZ (stepMZ (stepMZ v)))).sum + (stepMZ (stepMZ (stepMZ v))).sum +

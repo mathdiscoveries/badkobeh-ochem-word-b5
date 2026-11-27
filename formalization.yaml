@@ -290,6 +290,45 @@ sources:
       full, as recorded in the companion's references-checked.md row
       lenz2011.
     author_endorsement: not-contacted
+  - title: "On the synthesis of DOL growth"
+    authors:
+      - "Keijo Ruohonen"
+    id: "https://doi.org/10.5186/aasfm.1975.0118"
+    type: paper
+    location: "Annales Academiae Scientiarum Fennicae Series A I Mathematica 1 (1975), 143-154, Section 2, Theorem 1(iii), page 144"
+    relationship: independently-proves
+    note: >-
+      Theorem 1(iii) proves that the length sequence of every D0L system
+      (a morphism with an initial word) satisfies P(D)l = 0, where P is the
+      characteristic polynomial of its growth matrix and D the shift. With
+      P = x^5 - x^4 - x^3 + x^2 - x - 1, the characteristic polynomial the
+      companion computes for f5, this is the compared fB5_iter_length_rec
+      for every starting word and every k. Read depth: Section 1, Section 2
+      through Theorem 1 and its proof (pages 143-145 of the archive scan);
+      the rest of the paper is not recorded as read [to check].
+    author_endorsement: not-contacted
+  - title: "Balances for fixed points of primitive substitutions"
+    authors:
+      - "Boris Adamczewski"
+    id: "https://doi.org/10.1016/S0304-3975(03)00092-6"
+    type: paper
+    location: "Theoretical Computer Science 307 (2003), 47-75, Section 4, Theorem 13(iv) and Corollary 15"
+    relationship: independently-proves
+    note: >-
+      Corollary 15 classifies the fixed points of primitive substitutions
+      with bounded balance. For f5 the eigenvalues of modulus one are -1 and
+      the primitive sixth roots of unity, so Theorem 13(iv) applies, and the
+      balance function of b5 is unbounded exactly when the coefficient
+      A defined in Appendix B is nonzero. The compared b5_not_C_balanced
+      proves unboundedness directly through an explicit factor family. The
+      cross-family editorial audit computed a nonzero coefficient from a
+      loop of the sixth-power prefix automaton; the package authors have not
+      re-derived it. The credit is limited to the unbounded-balance
+      conclusion. Read depth: Section 4 (Theorem 13, Remark 14, Corollary
+      15) read in the author's copy (adamczewski.perso.math.cnrs.fr); the
+      appendices, including the definition of A, are not recorded as read
+      [to check].
+    author_endorsement: not-contacted
   - title: "A generalization of Fibonacci numbers"
     authors:
       - "V. C. Harris"
@@ -301,9 +340,10 @@ sources:
     note: >-
       The numbers u(n; 2, 2) start 1, 1, 1, 1, 2 and satisfy
       u(n) - 2u(n - 1) + u(n - 2) = u(n - 4), which is OEIS A005252. The
-      lengths |f5^k([0])| are A005252(k + 3); the compared
-      fB5_iter_length_rec is a recurrence for every starting word, and the
-      word-morphism statement is the companion paper's. Read depth: Section
+      lengths |f5^k([0])| are A005252(k + 3). The companion computes the
+      characteristic polynomial for f5; its all-seed length recurrence
+      (fB5_iter_length_rec) is the f5 instance of the D0L growth recurrence
+      in Ruohonen (1975), Theorem 1(iii). Read depth: Section
       2 read in the journal scan; the rest is not recorded as read
       [to check].
   - title: "OEIS A005252"

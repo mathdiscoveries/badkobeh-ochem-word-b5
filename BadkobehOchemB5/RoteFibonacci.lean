@@ -14,8 +14,9 @@ import Mathlib.Tactic
 This module resolves unconditionally the remaining open observation **(O2)** of Badkobeh and Ochem
 (*Theoret. Comput. Sci.* 588, 2015, Section 5): under the erasing binary morphism
 `g_rf : 0 ↦ 01, 1 ↦ 10, 2 ↦ ε, 3 ↦ 11, 4 ↦ 00`, the morphic image `g_rf(b_5)` not only has the
-exact same set of factors as the Rote–Fibonacci word `r` of Du, Mousavi, Schaeffer, and Shallit
-(`arXiv:1406.0670` / *Theoret. Comput. Sci.* 657, 2017, Theorem 35), but satisfies the exact
+exact same set of factors as the Rote–Fibonacci word `r` (Du, Mousavi, Schaeffer and Shallit,
+`arXiv:1406.0670` (2014), Theorem 35; Du, Mousavi, Rowland, Schaeffer and Shallit,
+*Theoret. Comput. Sci.* 657 (2017), Theorem 1), but satisfies the exact
 pointwise identity `g_rf(b_5) = 0 · complement(r)`.
 
 Main theorems proved unconditionally (zero `sorry`, zero `native_decide`, standard 3 axioms only):
@@ -821,9 +822,10 @@ theorem gRfB5_complDiff_eq_fibWord (k : ℕ) :
 
 /-! ## Section 4: Du–Mousavi–Schaeffer–Shallit's Rote–Fibonacci Word & Pointwise Identity -/
 
-/-- The Rote–Fibonacci word `r = 001001101101100100...` (Du–Mousavi–Schaeffer–Shallit,
-`arXiv:1406.0670` / *TCS* 657 (2017), Theorem 35(4)): `r[0] = 0` and
-`r[k+1] = r[k] ⊕ (1 - fibWord[k+1])`. -/
+/-- The Rote–Fibonacci word `r = 001001101101100100...`: `r[0] = 0` and
+`r[k+1] = r[k] ⊕ (1 - fibWord[k+1])`, the first-difference characterization of
+Du–Mousavi–Schaeffer–Shallit (`arXiv:1406.0670` (2014), Corollary 36) and
+Du–Mousavi–Rowland–Schaeffer–Shallit (*TCS* 657 (2017), Corollary 2). -/
 def roteFib : ℕ → Bool
   | 0 => false
   | k + 1 => xor (roteFib k) (!(fibWord (k + 1)))
@@ -982,7 +984,8 @@ theorem complDiff_getElem (w : List Bool) {i : ℕ} (hi : i + 1 < w.length) :
         exact ih (by simp only [List.length_cons]; omega)
 
 /-- **Exact Transducer Equivalence (`roteFibTransducer_eq_roteFib`)**:
-The 2-state transducer `T_0` on `fibWord` of Du–Mousavi–Schaeffer–Shallit (2017, Theorem 35(0))
+The 2-state transducer `T_0` on `fibWord` (Du–Mousavi–Schaeffer–Shallit (2014), Figure 18 and
+Theorem 35(0); Du–Mousavi–Rowland–Schaeffer–Shallit (2017), Figure 1 and Theorem 1(a))
 equals `roteFib` letter for letter at every index `k : ℕ`. -/
 theorem roteFibTransducer_eq_roteFib (k : ℕ) :
     roteFibTransducer k = roteFib k := by
