@@ -113,7 +113,7 @@ sources:
       b5_rote_fibonacci_projection also gives this count for r, while the
       equality of r's factor language with that of g_rf(b5) is the companion
       paper's. Theorem 7 was checked in the authors' copy dated 2016-02-10;
-      that version is not otherwise recorded as read in full.
+      that version is not otherwise recorded as read in full [to check].
     author_endorsement: not-contacted
   - title: "Decision Algorithms for Fibonacci-Automatic Words, with Applications to Pattern Avoidance"
     authors:
@@ -153,7 +153,8 @@ sources:
       subword complexity n + 1. The compared theorem b5_sturmian_projection
       also gives this count for the Fibonacci word; the credit is limited to
       that count, and the equality with the factor language of g_fib(b5) is
-      the companion paper's. The rest of this paper is not recorded as read.
+      the companion paper's. The rest of this paper is not recorded as read
+      [to check].
     author_endorsement: not-contacted
   - title: "Sequences with subword complexity 2n"
     authors:
