@@ -109,14 +109,19 @@ sources:
     location: "Theoretical Computer Science 657 (2017), 146-162, Theorem 7"
     relationship: independently-proves
     note: >-
-      Journal version of part of arXiv:1406.0670 (listed separately below).
-      It defines and analyzes the Rote-Fibonacci word r referenced in
-      Observation (O2), and its Theorem 7 proves that r has subword
-      complexity 2n for n >= 1; the compared theorem
-      b5_rote_fibonacci_projection also gives this count for r, while the
-      equality of r's factor language with that of g_rf(b5) is the companion
-      paper's. Theorem 7 was checked in the authors' copy dated 2016-02-10;
-      that version is not otherwise recorded as read in full [to check].
+      Journal version of part of arXiv:1406.0670 (listed separately below). Read
+      in full in the authors' copy dated 10 February 2016 (cs.uwaterloo.ca, own
+      pagination; it thanks the referees of an earlier version, and its
+      correspondence with the published text was not checked [to check]). It
+      defines the Rote-Fibonacci word r referenced in Observation (O2);
+      Corollary 2 (copy page 7): "The first differences Delta r of the
+      Rote-Fibonacci word r, taken modulo 2, give the complement of the
+      Fibonacci word f, with its first symbol omitted.", and Theorem 7 (copy
+      page 12): "The Rote-Fibonacci word has subword complexity 2n. Proof.
+      Follows from Corollary 2 together with [26, Thm. 3].", [26] being Rote
+      (1994). The compared b5_rote_fibonacci_projection also gives this count
+      for r at positive lengths, while the equality of r's factor language with
+      that of g_rf(b5) is the companion paper's.
     author_endorsement: not-contacted
   - title: "Decision Algorithms for Fibonacci-Automatic Words, with Applications to Pattern Avoidance"
     authors:
@@ -151,38 +156,40 @@ sources:
     location: "International Journal of Foundations of Computer Science 27(8) (2016), 943-963, Theorem 2"
     relationship: independently-proves
     note: >-
-      Journal counterpart of preprint Theorem 57: Theorem 2 (checked in the
-      authors' copy dated 2016-02-19) states that the Fibonacci word has
-      subword complexity n + 1. The compared theorem b5_sturmian_projection
-      also gives this count for the Fibonacci word; the credit is limited to
-      that count, and the equality with the factor language of g_fib(b5) is
-      the companion paper's. The rest of this paper is not recorded as read
-      [to check].
+      Journal counterpart of preprint Theorem 57. Read in full in the authors'
+      copy dated 19 February 2016 (cs.uwaterloo.ca, own pagination;
+      correspondence with the published text not checked [to check]; the matrix
+      and automaton listings were not checked entry by entry). Theorem 2 (copy
+      pages 5 and 6): "we have now reproved in a purely mechanical way the
+      following classic theorem of Morse and Hedlund [18]: Theorem 2. The
+      subword complexity function of f is n + 1." The compared theorem
+      b5_sturmian_projection also gives this count for the Fibonacci word; the
+      credit is limited to that count, and the equality with the factor language
+      of g_fib(b5) is the companion paper's.
     author_endorsement: not-contacted
   - title: "Sequences with subword complexity 2n"
     authors:
       - "Günter Rote"
     id: "https://doi.org/10.1006/jnth.1994.1012"
     type: paper
-    location: "Journal of Number Theory 46(2) (1994), 196-213, Theorem 3"
+    location: "Journal of Number Theory 46(2) (1994), 196-213, Section 4, Theorem 3"
     relationship: independently-proves
     note: >-
-      Medkova, Pelantova and Vuillon (RAIRO-ITA 53 (2019), arXiv:1812.03748v1,
-      Section 2.5, page 5) write: "A Rote sequence is a sequence v with the
-      factor complexity Cv(n) = 2n for all integer n >= 1. [...] Rote in [30]
-      proved that these sequences are essentially connected with Sturmian
-      sequences: Proposition 4 (Rote [30]). [...] Then v is a complementary
-      symmetric Rote sequence if and only if u is a Sturmian sequence.", where
-      [30] is this paper and u is the difference sequence of v modulo 2. Du et
-      al. (arXiv:1406.0670v4, page 37) derive "Theorem 43. The Rote-Fibonacci
-      word has subword complexity 2n." from their Corollary 36 ("The first
-      differences of the Rote-Fibonacci word r, taken modulo 2, give the
-      complement of the Fibonacci word f, with its first symbol omitted.")
-      "together with [66, Thm. 3]", [66] being this paper. The compared
-      b5_rote_fibonacci_projection gives the 2n count for the Rote-Fibonacci
-      word at positive lengths. Rote's paper itself is unread (paywalled) [to
-      check]; the credit rests on the two quoted passages. Metadata checked
-      against Crossref.
+      Read in full in the author's report version (TU Graz Report 204, version
+      2a, dated 10 February 1995, linked from the author's page at
+      page.mi.fu-berlin.de; report pages 1 to 16, not the journal's). Theorem 3
+      (report page 12): "An infinite 0-1-sequence w = w1w2w3 ... is a
+      complementation-symmetric sequence with complexity P(n) = 2n if and only
+      if its difference sequence delta [...] defined by delta_n = (w_{n+1} -
+      w_n) mod 2, is an irrational Sturmian sequence." By Du et al.'s Corollary
+      2 (journal Part II, listed above: the first differences of the
+      Rote-Fibonacci word modulo 2 give the complement of the Fibonacci word
+      with its first symbol omitted, an irrational Sturmian word), the
+      Rote-Fibonacci word has complexity 2n, as Du et al. derive in their
+      Theorem 7. The compared b5_rote_fibonacci_projection gives this 2n count
+      at positive lengths. Rote does not treat the Rote-Fibonacci word; the
+      credit is limited to the 2n count, and the equality of factor languages
+      with g_rf(b5) is the companion's. Metadata checked against Crossref.
     author_endorsement: not-contacted
   - title: "Représentation géométrique de suites de complexité 2n+1"
     authors:
@@ -232,15 +239,18 @@ sources:
     location: "Journal de Théorie des Nombres de Bordeaux 14(2) (2002), 351-386, Section 4.2, Lemme 4.9, pages 364 and 365"
     relationship: independently-proves
     note: >-
-      Lemme 4.9 proves that the coding of the orbit of 0 under a
-      three-interval exchange satisfying the i.d.o.c. condition has
-      complexity exactly 2n + 1 for every n >= 1. The compared
-      pi3B5_factor_complexity independently gives this count (and the
-      trivial n = 0 case) for the nondegenerate ternary coding pi_3(b5);
-      the identification of that coding and the check of its cut orbits are
-      the companion paper's. Read depth: the statement and proof of Lemme
-      4.9 read in the Numdam scan; the rest of the paper is not recorded as
-      read [to check].
+      Read in full in the Numdam scan (journal pagination; Lemme 4.9 and its
+      proof also on the page images of pages 364 and 365). Lemme 4.9: "Soit U
+      une suite obtenue en codant l'orbite du point 0 sous l'action d'un echange
+      de trois intervalles. Si l'echange satisfait a la condition I.D.O.C.,
+      alors : pour tout n >= 1, Pn(U) = 2n + 1". The compared
+      pi3B5_factor_complexity independently gives this count (and the trivial n
+      = 0 case) for the nondegenerate ternary coding pi_3(b5). The lemma is
+      stated for the orbit of the left end point 0, while pi_3(b5) codes the
+      orbit of an interior point; carrying the count over uses the minimality of
+      the exchange (all orbits have the same factors), which the lemma does not
+      print. The identification of the coding and the check of its cut orbits
+      are the companion paper's.
     author_endorsement: not-contacted
   - title: "Combinatorial properties of infinite words associated with cut-and-project sequences"
     authors:
@@ -252,16 +262,17 @@ sources:
     location: "Journal de Théorie des Nombres de Bordeaux 15(3) (2003), 697-725, Section 5, Definition 5.1 and Theorem 5.3, pages 709 to 711"
     relationship: independently-proves
     note: >-
-      Section 5 identifies the stepping function of a cut-and-project
-      sequence with a three-interval exchange of permutation (3,2,1), and
-      Theorem 5.3 proves C(n) = 2n + 1 for all n when the window length d is
-      not in Z[epsilon]. The compared pi3B5_factor_complexity gives this count
-      for pi_3(b5); the cross-family editorial audit identified its exchange
-      as an instance of the first case of Theorem 5.3 (window length
-      1 + 3phi/2, outside Z[phi]), which the package authors have not
-      re-derived. The credit is limited to that count. Read depth: Section
-      5, Definition 5.1, Theorem 5.3 and its proof read in the Numdam scan;
-      the rest of the paper is not recorded as read [to check].
+      Read in full in the Numdam scan (journal pagination; Section 5 also on the
+      page images of pages 710 and 711). Section 5 identifies the stepping
+      function of a cut-and-project sequence with a three-interval exchange of
+      permutation (3,2,1), and Theorem 5.3 (page 710): "If d is not in
+      Z[epsilon], then C(n) = 2n + 1, for n in N." The paper works with
+      bidirectional infinite words (page 699), while the compared
+      pi3B5_factor_complexity gives this count for the one-sided word pi_3(b5).
+      The cross-family editorial audit identified its exchange as an instance of
+      the first case of Theorem 5.3 (window length 1 + 3phi/2, outside Z[phi]);
+      that identification has not been re-derived here. The credit is limited to
+      that count.
     author_endorsement: not-contacted
   - title: "Structure of three-interval exchange transformations II: a combinatorial description of the trajectories"
     authors:
@@ -306,33 +317,42 @@ sources:
     location: "Annales Academiae Scientiarum Fennicae Series A I Mathematica 1 (1975), 143-154, Section 2, Theorem 1(iii), page 144"
     relationship: independently-proves
     note: >-
-      Theorem 1(iii) proves that the length sequence of every D0L system
-      (a morphism with an initial word) satisfies P(D)l = 0, where P is the
-      characteristic polynomial of its growth matrix and D the shift. With
-      P = x^5 - x^4 - x^3 + x^2 - x - 1, the characteristic polynomial the
-      companion computes for f5, this is the compared fB5_iter_length_rec
-      for every starting word and every k. Read depth: Section 1, Section 2
-      through Theorem 1 and its proof (pages 143-145 of the archive scan);
-      the rest of the paper is not recorded as read [to check].
+      Read in full in the journal's archive scan (acadsci.fi, journal
+      pagination). Theorem 1(iii) (page 144): the growth function of a DOL
+      system "satisfies the linear homogeneous difference equation PG(D) f(n) =
+      0 where PG is the characteristic polynomial of MG and D is the transition
+      operator", for any axiom. With P = x^5 - x^4 - x^3 + x^2 - x - 1, the
+      characteristic polynomial of the f5 matrix (recomputed here), this is the
+      compared fB5_iter_length_rec for every starting word and every k.
     author_endorsement: not-contacted
   - title: "Balances for fixed points of primitive substitutions"
     authors:
       - "Boris Adamczewski"
     id: "https://doi.org/10.1016/S0304-3975(03)00092-6"
     type: paper
-    location: "Theoretical Computer Science 307 (2003), 47-75, Section 4, Theorem 13(iv) and Corollary 15"
-    relationship: background
+    location: "Theoretical Computer Science 307 (2003), 47-75, Section 4, Theorem 13(iv) and Corollary 15, with Appendix B, Definition 27"
+    relationship: independently-proves
     note: >-
-      Read in the author's copy (adamczewski.perso.math.cnrs.fr): Section 4,
-      Theorem 13, Remark 14 and Corollary 15. Corollary 15 classifies the fixed
-      points of primitive substitutions with bounded balance. For f5 the
-      eigenvalues of modulus one are -1 and the primitive sixth roots of unity,
-      so by Theorem 13(iv) the balance function of b5 is unbounded exactly when
-      the coefficient A defined in Appendix B is nonzero. The blind cross-family
-      editorial audit reported a nonzero A computed from a loop of the
-      sixth-power prefix automaton; Appendix B is not read and A has not been
-      re-derived here [to check]. The compared b5_not_C_balanced proves
-      unboundedness directly through an explicit factor family.
+      Read in full in the published version on the author's page
+      (adamczewski.perso.math.cnrs.fr, journal pagination). Corollary 15 (page
+      58): "A fixed point U of a primitive substitution sigma has a bounded
+      balance function if and only if [...] (i) |theta2| < 1, (ii) |theta2| = 1,
+      alpha2 = 0, theta2 is a root of unity and A_{sigma,U} = 0", with A defined
+      in Appendix B (pages 73 and 74). For f5 the characteristic polynomial is
+      (x + 1)(x^2 - x - 1)(x^2 - x + 1), so the unit-modulus eigenvalues -1 and
+      exp(+-i pi/3) are simple roots of unity, alpha2 = 0 and the n0 of Appendix
+      B is 6. Checked here against the printed definitions: the weight psi = (1,
+      -2, 1, 1, -1) satisfies psi M = -psi, so it is orthogonal to the Perron
+      vector and fixed by M^6; f5^4(0) = 01234210423 is a prefix of f5^6(0), so
+      (0, 0, 0123421) is an elementary loop (Definition 27) of the prefix
+      automaton of f5^6 with psi-weight -1; hence A is nonzero (a numerical
+      evaluation over all 55093 elementary loops gives A = 3.236 to three
+      places), and Theorem 13(iv) gives a balance function of order log N,
+      unbounded. That is the conclusion of the compared b5_not_C_balanced, which
+      proves it directly through an explicit factor family. The paper does not
+      treat f5; the instance is the computation above. Theorem 13 rests on
+      Theorem 5, which the paper takes from the preprint "Symbolic discrepancy
+      and self-similar dynamics", not read here [to check].
     author_endorsement: not-contacted
   - title: "A generalization of Fibonacci numbers"
     authors:
@@ -370,16 +390,24 @@ sources:
       - "Gustav A. Hedlund"
     id: "https://doi.org/10.2307/2371431"
     type: paper
-    location: "American Journal of Mathematics 62(1) (1940), 1-42"
+    location: "American Journal of Mathematics 62(1) (1940), 1-42, Theorem 3.7 and Section 7"
     relationship: independently-proves
     note: >-
-      Du et al. (arXiv:1406.0670v4, page 48) write: "we have reproved the
-      following classic theorem of Morse and Hedlund [58]: Theorem 57. The
-      subword complexity function of f is n + 1.", where [58] is this paper and
-      f is the Fibonacci word. The compared b5_sturmian_projection identifies
-      the factor set of g_fib(b5) with that of the Fibonacci word and counts it,
-      so it also gives this count. Morse and Hedlund's paper is unread
-      (paywalled) [to check]; the credit rests on the quoted passage.
+      Read in the OCR text of the public archive.org scan of volume 62 (item
+      sim_american-journal-of-mathematics_1940_62): Sections 1 and 2, Theorems
+      3.5 to 3.7 with proofs, Sections 7 and 8, and a search of the whole
+      article. Theorem 3.7 (page 12): "Two irrational Sturmian trajectories with
+      the same frequency contain the same n + 1 different n-chains for each
+      positive integer n.", and page 24: "It follows from Theorem 3.7 that Omega
+      and Omega' contain the same chains and hence the same blocks." Here an
+      n-chain is a block made of n cells, not a block of n letters, so the
+      paper's n + 1 counts chains; the count of n + 1 factors of length n that
+      Du et al. (arXiv:1406.0670v4, page 48) attribute to this paper is not
+      printed here in that form, and the paper does not single out the Fibonacci
+      word. With the companion's identification of g_fib(b5) as an irrational
+      Sturmian trajectory of the Fibonacci word's frequency, Theorem 3.7 gives
+      the shared factor language of the compared b5_sturmian_projection; the
+      credit is limited to that. No page image was checked, only the OCR.
     author_endorsement: n/a
 
   - title: "The growth of word length in DoL-systems"
@@ -515,15 +543,22 @@ sources:
     id: "https://doi.org/10.1017/CBO9781107326019.003"
     type: paper
     location: "M. Lothaire, Algebraic Combinatorics on Words, Cambridge University Press (2002), chapter 2, 45-110, Propositions 2.1.18 and 2.1.25"
-    relationship: background
+    relationship: independently-proves
     note: >-
-      Not read: the Cambridge chapter is paywalled and the authors' hosts failed
-      (TLS mismatch, robots.txt refusal) [to check]. Reported by both prior-work
-      census seats, through Allouche and Glen and through Belov and Chernyat'ev
-      (2010), as proving that Sturmian words of the same slope have the same
-      factor language (Proposition 2.1.18), the kind of statement the compared
-      b5_sturmian_projection proves for g_fib(b5) and the Fibonacci word.
-      Metadata checked against Crossref.
+      Read in the pre-publication manuscript of the book dated 30 May 2001
+      (ii.uni.wroc.pl; chapter 2 on manuscript pages 40 to 97, not the printed
+      45 to 110), Section 2.1. Proposition 2.1.18 (manuscript page 53, proof on
+      page 54): "Let s and t be Sturmian words. 1. If s and t have same slope,
+      then F(s) = F(t)."; Section 2.1.2 (page 50) gives the rotation argument
+      for mechanical words; Example 2.1.1 (pages 41 and 42) proves that the
+      Fibonacci word is Sturmian, that is, has n + 1 factors of each length n;
+      Proposition 2.1.25 (page 56) proves minimality. With the companion's
+      identification of g_fib(b5) as a Sturmian word of the Fibonacci word's
+      slope, Proposition 2.1.18(1) gives the language equality of the compared
+      b5_sturmian_projection and Example 2.1.1 its n + 1 count. The credit is
+      limited to those statements; the printed edition's numbering and pages for
+      them were not checked, and the rest of the chapter is not recorded as
+      read. Metadata checked against Crossref.
     author_endorsement: not-contacted
   - title: "Discrete geometry and symbolic dynamics"
     authors:
