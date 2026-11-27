@@ -4,31 +4,33 @@ version: "v0.4"
 project:
   name: "Badkobeh and Ochem's Word b5: Interval-Exchange Coding, Factor Complexity 4n + 1, Projections, and Critical Exponent"
   description: >-
-    Unconditional Lean 4 + Mathlib formalization (514 audited declarations, zero
-    sorry, zero native_decide, standard axioms only) resolving all four
+    Unconditional Lean 4 + Mathlib formalization (514 audited declarations,
+    zero sorry, zero native_decide, standard axioms only) resolving all four
     questions and observations (Q1, Q2, O1, O2) from Badkobeh and Ochem
-    (Theoret. Comput. Sci. 588, 2015) for the 5-letter morphic fixed point
-    b5 = f5^omega(0) (0 -> 01, 1 -> 23, 2 -> 4, 3 -> 21, 4 -> 0). The library
+    (Theoret. Comput. Sci. 588, 2015) for the 5-letter morphic fixed point b5
+    = f5^omega(0) (0 -> 01, 1 -> 23, 2 -> 4, 3 -> 21, 4 -> 0). The library
     identifies b5 as the exact 5-interval coding of a golden-ratio 3-interval
     exchange on (-phi^2/2, phi^3/2) via the -1/phi left eigenvector, proving
     unconditionally that (Q1) b5 has exact factor complexity 4n + 1 for every
-    n >= 0, (O1) g_fib(b5) has the exact same factors as the Fibonacci word with
-    complexity n + 1, (O2) g_rf(b5) has the exact same factors as the
+    n >= 0, (O1) g_fib(b5) has the exact same factors as the Fibonacci word
+    with complexity n + 1, (O2) g_rf(b5) has the exact same factors as the
     Rote-Fibonacci word with complexity 2n for n >= 1, and (Q2) the critical
     exponent of b5 is exactly (5 + sqrt(5))/4 and is strictly unattained. It
-    also proves the sharp second-order bound |w|/p < (5 + sqrt(5))/4 -
-    (7 - sqrt(5))/(8p) with exact unattained deficit infimum (7 - sqrt(5))/4,
+    also proves the sharp second-order bound |w|/p < (5 + sqrt(5))/4 - (7 -
+    sqrt(5))/(8p) with exact unattained deficit infimum (7 - sqrt(5))/4,
     asymptotic critical exponent E*(b5) = (5 + sqrt(5))/4, irrationality of
     E(b5), reversal-swap (3 <-> 4) language invariance, ternary 3-IET collapse
-    complexity 2n + 1, unbounded balance defect, and the exact 5th-order A005252
-    length recurrence. Companion manuscript and verification archive:
+    complexity 2n + 1, unbounded balance defect, and the exact 5th-order
+    A005252 length recurrence. Companion manuscript and verification archive:
     https://mathdiscoveries.org/results/badkobeh-ochem-word-b5. Coverage by
     this package's Palomar comparison: the four headline questions and
-    observations Q1, Q2, O1 and O2 are compared in Lean, 4 of 4 (100%); of
-    the companion paper's 10 theorem parts, 3 are compared in full (30%;
-    parts 1(A), 2(A) and 5(B)) and 5 in part (2(B), 3(B), 4(A), 4(B) and
-    5(A)), and parts 1(B) and 3(A), with the uncompared pieces of the five
-    partial parts, are proved in this package's Lean library but not compared.
+    observations Q1, Q2, O1 and O2 are compared in Lean, 4 of 4 (100%); of the
+    companion paper's 10 theorem parts, 2 are compared in full (20%; parts
+    2(A) and 5(B)) and 6 in part (1(A), 2(B), 3(B), 4(A), 4(B) and 5(A); part
+    1(A) is compared through its coding statement, not its orbit equation
+    x_{p+1} = T(x_p)), and parts 1(B) and 3(A), with the uncompared pieces of
+    the six partial parts, are proved in this package's Lean library but not
+    compared.
   authors:
     - "Tyler B. Hughes"
   license: "Apache-2.0"
@@ -56,7 +58,7 @@ sources:
       338 short seeds in the proof of Theorem 4 is stated and explained in the
       paper and is evaluated in the Lean kernel here. The paper answers both
       questions (Q1, Q2) and both observations (O1, O2) of Badkobeh and Ochem
-      (2015), listed below. No prior proof of these statements was found in
+      (2015), listed below. No prior proof of Q1, Q2, O1 or O2 was found in
       the searches logged; Badkobeh and Ochem (2015) and their sequel
       (arXiv:2312.10757v2, author copy of Theoret. Comput. Sci. 1072 (2026),
       115875) were read in full, and the publisher copy of the sequel returned
@@ -69,13 +71,16 @@ sources:
       - "Pascal Ochem"
     id: "https://doi.org/10.1016/j.tcs.2015.03.044"
     type: paper
-    location: "Theoretical Computer Science 588 (2015), 73-80"
-    relationship: background
+    location: "Theoretical Computer Science 588 (2015), 73-80, Sections 3 and 5"
+    relationship: independently-proves
     note: >-
       Introduces b5 = f5^omega(0), characterizes it by avoiding squares and the
       16 forbidden factors F5 (Theorem 1), and poses the factor complexity
       4n + 1, critical exponent (5 + sqrt(5))/4, and Fibonacci / Rote-Fibonacci
-      projection problems (Sections 3 and 5).
+      projection problems (Sections 3 and 5). Section 3 establishes that the
+      factor language of b5 is invariant under reversing a word and exchanging
+      3 and 4; the compared theorem b5_language_rev_swap34_invariant gives an
+      independent geometric proof (companion Theorem 5(A)). Read in full.
     author_endorsement: not-contacted
   - title: "More characterizations of morphic words"
     authors:
@@ -96,9 +101,29 @@ sources:
       - "Jeffrey Shallit"
     id: "https://doi.org/10.1016/j.tcs.2016.10.005"
     type: paper
-    location: "Theoretical Computer Science 657 (2017), 146-162; preprint arXiv:1406.0670v4 (Figure 18, Theorem 35)"
+    location: "Theoretical Computer Science 657 (2017), 146-162"
     relationship: background
-    note: "Defines and analyzes the Rote-Fibonacci word r referenced in Observation (O2)."
+    note: "Journal version of part of arXiv:1406.0670 (listed separately below); defines and analyzes the Rote-Fibonacci word r referenced in Observation (O2)."
+    author_endorsement: not-contacted
+  - title: "Decision Algorithms for Fibonacci-Automatic Words, with Applications to Pattern Avoidance"
+    authors:
+      - "Chen Fei Du"
+      - "Hamoon Mousavi"
+      - "Luke Schaeffer"
+      - "Jeffrey Shallit"
+    id: "https://arxiv.org/abs/1406.0670"
+    type: paper
+    location: "arXiv:1406.0670v4 (2014), Theorems 43 and 57"
+    relationship: independently-proves
+    note: >-
+      Theorem 43 proves that the Rote-Fibonacci word has subword complexity 2n
+      and Theorem 57 that the Fibonacci word has subword complexity n + 1 (the
+      classical Sturmian count, after Morse and Hedlund; the Rote-Fibonacci
+      word itself goes back to Rote). The compared theorems
+      b5_sturmian_projection and b5_rote_fibonacci_projection, by identifying
+      the factor sets and counting them, also give these two counts for the
+      reference words; the projection equalities for b5 are the companion
+      paper's. Read in full (arXiv v4).
     author_endorsement: not-contacted
 
 related_formalizations: []
@@ -106,23 +131,24 @@ related_formalizations: []
 status:
   scope: >-
     Complete, unconditional Lean 4 + Mathlib proof of all 4 headline questions
-    and observations (Q1, Q2, O1, O2) from Badkobeh and Ochem (2015) and all 10
-    theorem parts of the companion manuscript (514 audited public declarations
-    in BadkobehOchemB5, zero sorry, zero native_decide, standard axioms only):
-    5-interval coding of b5 via the golden-ratio 3-interval exchange on
-    (-phi^2/2, phi^3/2), exact factor complexity 4n + 1 for every n >= 0,
-    exact language equality of g_fib(b5) with the Fibonacci word (complexity
-    n + 1), exact language equality of g_rf(b5) with the Rote-Fibonacci word
-    (complexity 2n for n >= 1), exact unattained critical exponent
-    (5 + sqrt(5))/4 across all 338 seed buckets in-kernel, sharp second-order
-    bound |w|/p < (5 + sqrt(5))/4 - (7 - sqrt(5))/(8p) with exact unattained
-    deficit infimum (7 - sqrt(5))/4, asymptotic critical exponent
-    E*(b5) = (5 + sqrt(5))/4, irrationality of E(b5), reversal-swap (3 <-> 4)
-    invariance, ternary 3-IET collapse complexity 2n + 1, unbounded balance
-    defect, and 5th-order A005252 prefix-length recurrence. The supporting
-    library also proves square-freeness and F5 avoidance (both contained in
-    Theorem 1 of Badkobeh and Ochem 2015) as corollaries; these are not
-    among the compared statements.
+    and observations (Q1, Q2, O1, O2) from Badkobeh and Ochem (2015) and all
+    10 theorem parts of the companion manuscript (514 audited public
+    declarations in BadkobehOchemB5, zero sorry, zero native_decide, standard
+    axioms only): 5-interval coding of b5 via the golden-ratio 3-interval
+    exchange on (-phi^2/2, phi^3/2), exact factor complexity 4n + 1 for every
+    n >= 0, exact language equality of g_fib(b5) with the Fibonacci word
+    (complexity n + 1), exact language equality of g_rf(b5) with the
+    Rote-Fibonacci word (complexity 2n for n >= 1), exact unattained critical
+    exponent (5 + sqrt(5))/4, with the 338 short seeds covered by 336 distinct
+    summaries checked in the Lean kernel, sharp second-order bound |w|/p < (5
+    + sqrt(5))/4 - (7 - sqrt(5))/(8p) with exact unattained deficit infimum (7
+    - sqrt(5))/4, asymptotic critical exponent E*(b5) = (5 + sqrt(5))/4,
+    irrationality of E(b5), reversal-swap (3 <-> 4) invariance, ternary 3-IET
+    collapse complexity 2n + 1, unbounded balance defect, and 5th-order
+    A005252 prefix-length recurrence. The supporting library also proves
+    square-freeness and F5 avoidance (both contained in Theorem 1 of Badkobeh
+    and Ochem 2015) as corollaries; these are not among the compared
+    statements.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Quot.sound", "Classical.choice"]
@@ -151,8 +177,8 @@ fidelity:
   divergences: >-
     None for the compared statements. All 4 of 4 headline questions and
     observations on mathdiscoveries.org/results/badkobeh-ochem-word-b5 are
-    compared; of the 10 theorem parts of the companion manuscript (Draft 3),
-    3 are compared in full and 5 in part, and the rest are proved in the
+    compared; of the 10 theorem parts of the companion manuscript (Draft 3), 2
+    are compared in full and 6 in part, and the rest are proved in the
     supporting library without being compared (see project.description).
 
 review:

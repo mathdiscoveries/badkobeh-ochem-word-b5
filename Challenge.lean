@@ -19,8 +19,8 @@ observations (Q1, Q2, O1, O2) from Badkobeh and Ochem (*Theoret. Comput. Sci.*
 588, 2015) for the fixed point `b₅ = f₅^ω(0)` of
 `0 ↦ 01, 1 ↦ 23, 2 ↦ 4, 3 ↦ 21, 4 ↦ 0`, together with sharp second-order
 critical-exponent bounds, asymptotic critical exponent, irrationality, reversal-
-swap symmetry, ternary 3-IET projection, unbounded balance defect, `F₅`
-avoidance, and the 5th-order `A005252` length recurrence.
+swap symmetry, ternary 3-IET projection, unbounded balance defect, and the
+5th-order `A005252` length recurrence.
 -/
 
 @[expose] public section
