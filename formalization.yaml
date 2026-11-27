@@ -167,13 +167,21 @@ sources:
     location: "Journal of Number Theory 46(2) (1994), 196-213, Theorem 3"
     relationship: independently-proves
     note: >-
-      The compared theorem b5_rote_fibonacci_projection independently gives
-      the 2n complexity count for the Rote-Fibonacci word at positive
-      lengths. Du et al. (arXiv:1406.0670v4, Theorem 43) derive this case
-      from Rote's Theorem 3 and their Corollary 36. The equality of factor
-      languages with g_rf(b5) is the companion paper's result. Metadata
-      checked against Crossref; Rote's paper is recorded as unread (paywalled)
-      [to check], as in the companion's references-checked.md row rote1994.
+      Medkova, Pelantova and Vuillon (RAIRO-ITA 53 (2019), arXiv:1812.03748v1,
+      Section 2.5, page 5) write: "A Rote sequence is a sequence v with the
+      factor complexity Cv(n) = 2n for all integer n >= 1. [...] Rote in [30]
+      proved that these sequences are essentially connected with Sturmian
+      sequences: Proposition 4 (Rote [30]). [...] Then v is a complementary
+      symmetric Rote sequence if and only if u is a Sturmian sequence.", where
+      [30] is this paper and u is the difference sequence of v modulo 2. Du et
+      al. (arXiv:1406.0670v4, page 37) derive "Theorem 43. The Rote-Fibonacci
+      word has subword complexity 2n." from their Corollary 36 (the first
+      differences of the Rote-Fibonacci word modulo 2 give the Fibonacci word)
+      "together with [66, Thm. 3]", [66] being this paper. The compared
+      b5_rote_fibonacci_projection gives the 2n count for the Rote-Fibonacci
+      word at positive lengths. Rote's paper itself is unread (paywalled) [to
+      check]; the credit rests on the two quoted passages. Metadata checked
+      against Crossref.
     author_endorsement: not-contacted
   - title: "Représentation géométrique de suites de complexité 2n+1"
     authors:
@@ -262,15 +270,14 @@ sources:
     id: "https://doi.org/10.1007/BF02893083"
     type: paper
     location: "Journal d'Analyse Mathématique 89 (2003), 239-276, Section 3"
-    relationship: independently-proves
+    relationship: background
     note: >-
-      Part II (distinct from Part I, Ann. Inst. Fourier 2001, which the
-      companion's references-checked.md records as read) gives the 2n + 1
-      complexity of codings of three-interval exchanges; the compared
-      pi3B5_factor_complexity gives this count for pi_3(b5). Metadata checked
-      against Crossref; the section was located by the cross-family
-      editorial audit, and the paywalled paper is not recorded as read
-      [to check].
+      Reported by the blind cross-family editorial audit (GPT seat), not read
+      here: Section 3 gives the 2n + 1 complexity of codings of three-interval
+      exchanges, the count that the compared pi3B5_factor_complexity gives for
+      pi_3(b5). Part II is unread (paywalled) [to check]; Part I (Ann. Inst.
+      Fourier 2001) is the part the companion's references-checked.md records as
+      read. Metadata checked against Crossref.
     author_endorsement: not-contacted
   - title: "Note on powers in three interval exchange transformations"
     authors:
@@ -313,21 +320,18 @@ sources:
     id: "https://doi.org/10.1016/S0304-3975(03)00092-6"
     type: paper
     location: "Theoretical Computer Science 307 (2003), 47-75, Section 4, Theorem 13(iv) and Corollary 15"
-    relationship: independently-proves
+    relationship: background
     note: >-
-      Corollary 15 classifies the fixed points of primitive substitutions
-      with bounded balance. For f5 the eigenvalues of modulus one are -1 and
-      the primitive sixth roots of unity, so Theorem 13(iv) applies, and the
-      balance function of b5 is unbounded exactly when the coefficient
-      A defined in Appendix B is nonzero. The compared b5_not_C_balanced
-      proves unboundedness directly through an explicit factor family. The
-      cross-family editorial audit computed a nonzero coefficient from a
-      loop of the sixth-power prefix automaton; the package authors have not
-      re-derived it. The credit is limited to the unbounded-balance
-      conclusion. Read depth: Section 4 (Theorem 13, Remark 14, Corollary
-      15) read in the author's copy (adamczewski.perso.math.cnrs.fr); the
-      appendices, including the definition of A, are not recorded as read
-      [to check].
+      Read in the author's copy (adamczewski.perso.math.cnrs.fr): Section 4,
+      Theorem 13, Remark 14 and Corollary 15. Corollary 15 classifies the fixed
+      points of primitive substitutions with bounded balance. For f5 the
+      eigenvalues of modulus one are -1 and the primitive sixth roots of unity,
+      so by Theorem 13(iv) the balance function of b5 is unbounded exactly when
+      the coefficient A defined in Appendix B is nonzero. The blind cross-family
+      editorial audit reported a nonzero A computed from a loop of the
+      sixth-power prefix automaton; Appendix B is not read and A has not been
+      re-derived here [to check]. The compared b5_not_C_balanced proves
+      unboundedness directly through an explicit factor family.
     author_endorsement: not-contacted
   - title: "A generalization of Fibonacci numbers"
     authors:
@@ -368,14 +372,174 @@ sources:
     location: "American Journal of Mathematics 62(1) (1940), 1-42"
     relationship: independently-proves
     note: >-
-      Source of the classical count of n + 1 factors of each length for
-      Sturmian words, credited by Du et al. (arXiv:1406.0670v4, before
-      Theorem 57). The compared theorem b5_sturmian_projection, by
-      identifying the factor set of g_fib(b5) with that of the Fibonacci word
-      and counting it, also gives this count for the Fibonacci word. Unread
-      (paywalled) [to check]; credited through Du et al.
+      Du et al. (arXiv:1406.0670v4, page 48) write: "we have reproved the
+      following classic theorem of Morse and Hedlund [58]: Theorem 57. The
+      subword complexity function of f is n + 1.", where [58] is this paper and
+      f is the Fibonacci word. The compared b5_sturmian_projection identifies
+      the factor set of g_fib(b5) with that of the Fibonacci word and counts it,
+      so it also gives this count. Morse and Hedlund's paper is unread
+      (paywalled) [to check]; the credit rests on the quoted passage.
     author_endorsement: n/a
 
+  - title: "The growth of word length in DoL-systems"
+    authors:
+      - "P. G. Doucet"
+    id: "https://tidsskrift.dk/daimipb/article/view/6434"
+    type: other
+    location: "Open House in Unusual Automata Theory, January 1972, DAIMI Report Series (DAIMI PB) 15 (1973), 83-94, section 2, Lemma 1 and item 2 of the note after it, page 86"
+    relationship: independently-proves
+    note: >-
+      Departmental technical report, read in the DAIMI PB 15 volume on
+      tidsskrift.dk. Lemma 1 (page 86): "Let G = <Sigma,P,x0> be a DoL-system
+      with #Sigma = k. Then the Parikh-sequence [...] satisfies a difference
+      equation of order k which is the associated equation of Ap's
+      characteristic polynomial.", and item 2 of the note after it: "the
+      sequence |x0|,|x1|,|x2|,... of word lengths satisfies the same equation."
+      The production matrix of f5 has characteristic polynomial x^5 - x^4 - x^3
+      + x^2 - x - 1 (checked by computation), so Lemma 1 gives the recurrence of
+      the compared fB5_iter_length_rec for every nonempty seed; the empty seed
+      is trivial. The rest of the paper is not recorded as read.
+    author_endorsement: not-contacted
+  - title: "Integral sequential word functions and growth equivalence of Lindenmayer systems"
+    authors:
+      - "Azaria Paz"
+      - "Arto Salomaa"
+    id: "https://doi.org/10.1016/S0019-9958(73)80002-6"
+    type: paper
+    location: "Information and Control 23(4) (1973), 313-343, Section 3a, Theorems 28 and 30"
+    relationship: background
+    note: >-
+      Read in the report version of the same paper, DAIMI PB 15 (Aarhus, 1973),
+      Section 3a, pages 155 and 156; the journal copy was unreachable
+      (ScienceDirect HTTP 403). Theorem 28: "For any DOL-system S, its growth
+      function can be expressed in the form f_S(n) = pi A^n eta"; Theorem 30
+      gives the generating function pi(I - Ax)^{-1} eta. The order-five
+      recurrence of the compared fB5_iter_length_rec follows from Theorem 28 by
+      the Cayley-Hamilton theorem for the f5 matrix, a step the paper does not
+      print, so the credit is background. The rest of the paper is not recorded
+      as read.
+    author_endorsement: not-contacted
+  - title: "On exponential growth in Lindenmayer systems"
+    authors:
+      - "Arto Salomaa"
+    id: "https://doi.org/10.1016/1385-7258(73)90017-6"
+    type: paper
+    location: "Indagationes Mathematicae (Proceedings) 76(1) (1973), 23-30"
+    relationship: background
+    note: >-
+      Not read: ScienceDirect answered HTTP 403 and no open copy was found [to
+      check]. Reported by others: Herman and Vitanyi (Mathematisch Centrum IW
+      27/74, page 39) say this paper "contains the closed form expression for
+      DOL growth functions", and Vitanyi (Mathematical Centre Tracts 96, Section
+      4.1, page 134) credits Paz and Salomaa [1973] and Salomaa [1973b] for the
+      derivation of the linear difference equation that every D0L growth
+      function satisfies, of which the compared fB5_iter_length_rec is the f5
+      instance. Metadata checked against Crossref.
+    author_endorsement: not-contacted
+  - title: "Échanges de trois intervalles et suites minimales"
+    authors:
+      - "Marie-Line Santini-Bouchard"
+    id: "https://doi.org/10.1016/S0304-3975(96)00023-0"
+    type: paper
+    location: "Theoretical Computer Science 174(1-2) (1997), 171-191"
+    relationship: independently-proves
+    note: >-
+      Didier (J. Theor. Nombres Bordeaux 9 (1997), introduction, page 465, read
+      on Numdam) writes: "Dans [SAN], M. L. Santini [...] montre que, si E est
+      un echange regulier de trois intervalles, la fonction de complexite du
+      codage de l'orbite, sous l'action de E, de tout point de [0,1[ est egale a
+      2n + 1 pour tout entier naturel non nul n.", where [SAN] is this paper.
+      The compared pi3B5_factor_complexity gives this count for pi_3(b5). The
+      paper itself is unread: ScienceDirect refused every route with HTTP 403
+      [to check]; the theorem number is not known. Metadata checked against
+      Crossref and zbMATH.
+    author_endorsement: not-contacted
+  - title: "Languages of k-interval exchange transformations"
+    authors:
+      - "Sébastien Ferenczi"
+      - "Luca Q. Zamboni"
+    id: "https://doi.org/10.1112/blms/bdn051"
+    type: paper
+    location: "Bulletin of the London Mathematical Society 40(4) (2008), 705-714, Theorem 1"
+    relationship: background
+    note: >-
+      Not read: the Wiley and OUP copies answered HTTP 403, the authors' copy
+      host did not answer robots.txt, and no arXiv copy exists [to check].
+      Reported by others: the blind cross-family editorial audit and the GPT
+      prior-work census seat say that Theorem 1 characterizes the languages of
+      natural codings of k-interval exchanges with the infinite distinct orbit
+      condition and that the authors draw the complexity (k - 1)n + 1 just after
+      it, which gives 4n + 1 (compared b5_factor_complexity) and 2n + 1
+      (compared pi3B5_factor_complexity); Ferenczi, Hubert and Zamboni
+      (arXiv:2212.01024, page 2 and Theorem 15) credit it with the language
+      characterization. Metadata checked against Crossref and zbMATH.
+    author_endorsement: not-contacted
+  - title: "Sequences with minimal block growth"
+    authors:
+      - "Ethan M. Coven"
+      - "Gustav A. Hedlund"
+    id: "https://doi.org/10.1007/BF01762232"
+    type: paper
+    location: "Mathematical Systems Theory 7(2) (1973), 138-153"
+    relationship: background
+    note: >-
+      Not read: the publisher's robots.txt refuses this client and no open copy
+      was found [to check]. Reported by both prior-work census seats, through
+      Rote (1994) and Allouche (Fibonacci Quarterly 2017, Theorem 4.4), as
+      characterizing the binary sequences of block growth n + 1 as codings of
+      irrational rotations, the characterization behind the n + 1 count that the
+      compared b5_sturmian_projection gives for g_fib(b5). Metadata checked
+      against Crossref and zbMATH.
+    author_endorsement: not-contacted
+  - title: "Sequences of low complexity: automatic and Sturmian sequences"
+    authors:
+      - "Valérie Berthé"
+    id: "https://doi.org/10.1017/CBO9780511758959.002"
+    type: paper
+    location: "Topics in Symbolic Dynamics and Applications, London Mathematical Society Lecture Note Series 279, Cambridge University Press (2000), 1-34, Section 2.1 and Section 6.1, Theorem 6.3"
+    relationship: background
+    note: >-
+      Not read: the author copy's host refuses this client in robots.txt and the
+      Cambridge chapter is paywalled [to check]. Reported by the GPT prior-work
+      census seat: Section 2.1 gives the n + 1 factor count of Sturmian
+      sequences and Theorem 6.3 their equivalence with codings of irrational
+      rotations, which with the slope and intercept description of g_fib(b5)
+      bears on the compared b5_sturmian_projection. Metadata checked against
+      Crossref and zbMATH.
+    author_endorsement: not-contacted
+  - title: "Sturmian Words"
+    authors:
+      - "Jean Berstel"
+      - "Patrice Séébold"
+    id: "https://doi.org/10.1017/CBO9781107326019.003"
+    type: paper
+    location: "M. Lothaire, Algebraic Combinatorics on Words, Cambridge University Press (2002), chapter 2, 45-110, Propositions 2.1.18 and 2.1.25"
+    relationship: background
+    note: >-
+      Not read: the Cambridge chapter is paywalled and the authors' hosts failed
+      (TLS mismatch, robots.txt refusal) [to check]. Reported by both prior-work
+      census seats, through Allouche and Glen and through Belov and Chernyat'ev
+      (2010), as proving that Sturmian words of the same slope have the same
+      factor language (Proposition 2.1.18), the kind of statement the compared
+      b5_sturmian_projection proves for g_fib(b5) and the Fibonacci word.
+      Metadata checked against Crossref.
+    author_endorsement: not-contacted
+  - title: "Discrete geometry and symbolic dynamics"
+    authors:
+      - "Valérie Berthé"
+    id: "https://zbmath.org/?q=an:1204.37011"
+    type: paper
+    location: "Complex Analysis and Digital Geometry, Acta Universitatis Upsaliensis 86 (2009), 81-110, Theorem 2"
+    relationship: background
+    note: >-
+      Not read: the author copy's host refuses this client in robots.txt, and
+      the only other copy found is on a host this search does not use [to
+      check]. Reported by the GPT prior-work census seat: the rotation-cylinder
+      argument before Theorem 2 concludes that two Sturmian words coding the
+      same rotation have the same factors, which covers the two Fibonacci-slope
+      intercepts of the compared b5_sturmian_projection. Metadata checked
+      against zbMATH.
+    author_endorsement: not-contacted
 related_formalizations: []
 
 status:
