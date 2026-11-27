@@ -101,9 +101,17 @@ sources:
       - "Jeffrey Shallit"
     id: "https://doi.org/10.1016/j.tcs.2016.10.005"
     type: paper
-    location: "Theoretical Computer Science 657 (2017), 146-162"
-    relationship: background
-    note: "Journal version of part of arXiv:1406.0670 (listed separately below); defines and analyzes the Rote-Fibonacci word r referenced in Observation (O2)."
+    location: "Theoretical Computer Science 657 (2017), 146-162, Theorem 7"
+    relationship: independently-proves
+    note: >-
+      Journal version of part of arXiv:1406.0670 (listed separately below).
+      It defines and analyzes the Rote-Fibonacci word r referenced in
+      Observation (O2), and its Theorem 7 proves that r has subword
+      complexity 2n for n >= 1; the compared theorem
+      b5_rote_fibonacci_projection also gives this count for r, while the
+      equality of r's factor language with that of g_rf(b5) is the companion
+      paper's. Theorem 7 was checked in the authors' copy dated 2016-02-10;
+      that version is not otherwise recorded as read in full.
     author_endorsement: not-contacted
   - title: "Decision Algorithms for Fibonacci-Automatic Words, with Applications to Pattern Avoidance"
     authors:
@@ -117,14 +125,32 @@ sources:
     relationship: independently-proves
     note: >-
       Theorem 43 proves that the Rote-Fibonacci word has subword complexity 2n
-      and Theorem 57 that the Fibonacci word has subword complexity n + 1 (the
-      classical Sturmian count, after Morse and Hedlund; the Rote-Fibonacci
-      word itself goes back to Rote). The compared theorems
+      and Theorem 57 reproves the classical theorem of Morse and Hedlund
+      (listed below) that the Fibonacci word has subword complexity n + 1. Du
+      et al. name and describe the Rote-Fibonacci word in Section 5; it
+      belongs to the family of words of complexity 2n characterized by
+      Gunter Rote (1994, Theorem 3). The compared theorems
       b5_sturmian_projection and b5_rote_fibonacci_projection, by identifying
       the factor sets and counting them, also give these two counts for the
       reference words; the projection equalities for b5 are the companion
       paper's. Read in full (arXiv v4).
     author_endorsement: not-contacted
+  - title: "Symbolic Dynamics II. Sturmian Trajectories"
+    authors:
+      - "Marston Morse"
+      - "Gustav A. Hedlund"
+    id: "https://doi.org/10.2307/2371431"
+    type: paper
+    location: "American Journal of Mathematics 62(1) (1940), 1-42"
+    relationship: independently-proves
+    note: >-
+      Source of the classical count of n + 1 factors of each length for
+      Sturmian words, credited by Du et al. (arXiv:1406.0670v4, before
+      Theorem 57). The compared theorem b5_sturmian_projection, by
+      identifying the factor set of g_fib(b5) with that of the Fibonacci word
+      and counting it, also gives this count for the Fibonacci word. Unread
+      (paywalled) [to check]; credited through Du et al.
+    author_endorsement: n/a
 
 related_formalizations: []
 
